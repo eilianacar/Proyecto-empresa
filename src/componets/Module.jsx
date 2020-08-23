@@ -1,16 +1,17 @@
-//Para mostrar la lista de los modulos
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import data from '../modules.json';
-const Modules = (props) => {
+import style from '../styles/Modules.css';
+import image from '../assests/GAV_Personaje09.png';
+
+const Module = (props) => {
+  console.log(props.match.params);
   const module1 = data[0].module1;
   const module2 = data[0].module2;
   const module3 = data[0].module3;
-  
-  //MÓDULO 1: CORONAVIRUS
-  const titleAndContent = [module1.topic1[0].title, module1.topic1[0].content];
-  /* console.log("Modulo 1:", module1.title)
-  console.log("Tema 1:", titleAndContent[0], "Contenido:", titleAndContent[1]); */
 
+  const [moduleState, setModuleState] = useState('');
+  //MÓDULO 1: CORONAVIRUS
+  const titleAndContent = [module1.title, module1.topic1[0].title, module1.topic1[0].content];  
   //MÓDULO 2: PROMOCIÓN DEL BIENESTAR
   const module2Content = Object.values(module2);
   const module2Title = module2Content[0];
@@ -70,28 +71,57 @@ const Modules = (props) => {
   const module3Topic4Subtopics = module3Topic4[1].map(subtopic => {
     return [subtopic.title, subtopic.content];
   })
-  const module3Topic4Bulletpoints = module3Topic4Subtopics[1][1].forEach(bulletPoint => console.log(bulletPoint));
+  /* const module3Topic4Bulletpoints = module3Topic4Subtopics[1][1].forEach(bulletPoint => console.log(bulletPoint)); */
   /*Subtemas: Enfoque,
-              8 consejos para padres
-  */
+            8 consejos para padres
+*/
   //console.log(module3Topic4Bulletpoints);
+  useEffect(() => {
+    switch (true) {
+      case (props.match.params.module === '1' && props.match.params.topic === 'qué-está-pasando'):
+        setModuleState({
+          title: `Módulo 1: ${titleAndContent[0]}`,
+          topic: `Tema 1: ${titleAndContent[1]}`,
+          content: titleAndContent[2]
+        });
+        break;
+      case (props.match.params.module === '2' && props.match.params.topic === 'promoción-del-bienestar'):
+        setModuleState({
+          title: `Módulo 2: ${module2Title}`,
+          topic: `Tema 1: ${module2Topic1[0]}`,
+          content: module2Topic1[1]
+        });
+        break;
+      case (props.match.params.module === '3' && props.match.params.topic === 'instalación-y-control-de-hábitos'):
+        setModuleState({
+          title: `Módulo 3: ${module3Title}`,
+          topic: `Tema 1: ${module3Topic1[0]}`,
+          content: module3Topic1[1]
+        })
+    }
+  }, [])
 
   return (
     <div>
-      <article>
-        <section>
-        <p>Módulo 1.1: ¿Qué está pasando?</p>
+      <main className="container">
+        <section className="heading">
+          <h1>{moduleState.title}</h1>
         </section>
-        <main>
-          <p>
-            Vivimos algo histórico. Si hubiésemos hecho el ejercicio de imaginarnos lo que está ocurriendo antes de que pasara, probablemente no hubiésemos podido imaginar conexactitud todo lo que está ocurriendo y todo lo que esta situación conlleva.
-          </p>
-          <img src="" alt=""/>
-        </main>
-        
-      </article>
+        <section className="contentWrapper">
+          <h2>{moduleState.topic}</h2>
+          <section className="content">
+            <p>
+              {moduleState.content}
+            </p>
+            <div className="image-container">
+              <img src={image} alt="" />
+            </div>
+          </section>
+          
+        </section>
+      </main>
     </div>
   );
 }
 
-export default Modules;
+export default Module;

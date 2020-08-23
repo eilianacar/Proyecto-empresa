@@ -11,7 +11,8 @@ import Ent from './componets/ent';
 import Game from './componets/game';
 import Home from './componets/home';
 import LoginModal from './componets/loginModal';
-import Modules from './componets/modules.jsx';
+import Modules from './componets/Modules.jsx';
+import Module from './componets/Module.jsx';
 import Ranking from './componets/ranking';
 
 const App = () => {
@@ -26,13 +27,14 @@ const App = () => {
         <Link to="/loginModal">Login del Juego</Link>
         <Link to="/ranking">Ranking</Link>       
         <Switch>
-          <Route path="/" exact component= {Cover}/>
-          <Route path="/ent" component= {Ent}/>
-          <Route path="/game" component= {Game}/>  
-          <Route path="/home" component= {Home}/>
-          <Route path="/loginModal" component= {LoginModal}/>
-          <Route path="/modules" component= {Modules}/>
-          <Route path="/ranking" component= {Ranking}/>             
+          <Route path="/" exact component={Cover}/>
+          <Route path="/ent" component={Ent}/>
+          <Route path="/game" component={Game}/>  
+          <Route path="/home" component={Home}/>
+          <Route path="/loginModal" component={LoginModal}/>
+          <Route path="/modules/:module/:topic" component={Module}/>
+          <Route path="/modules" component={Modules}/>
+          <Route path="/ranking" component={Ranking}/>             
         </Switch>
       </div>
     </Router>
