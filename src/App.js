@@ -11,7 +11,7 @@ import Ent from './componets/ent';
 import Game from './componets/game';
 import Home from './componets/home';
 import LoginModal from './componets/loginModal';
-import Modules from './componets/modules';
+import Modules from './componets/modules.jsx';
 import Ranking from './componets/ranking';
 
 const App = () => {
