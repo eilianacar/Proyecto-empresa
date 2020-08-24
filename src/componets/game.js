@@ -1,4 +1,4 @@
-// Para los juegos
+// Para los juegos veamos
 import React from 'react';
 import triviaAdults from '../data/triviaAdults.json'
 import '../styles/game.css'
