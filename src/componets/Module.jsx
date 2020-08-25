@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import data from '../modulesv2.0.json';
-import style from '../styles/Modules.css';
+import data from '../modules.json';
+import '../styles/Modules.css';
 import image from '../assests/GAV_Personaje09.png';
 
 const Module = (props) => {
