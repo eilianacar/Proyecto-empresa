@@ -16,7 +16,7 @@ import LoginModal from './componets/loginModal';
 import Modules from './componets/Modules.jsx';
 import Module from './componets/Module.jsx';
 import Ranking from './componets/ranking';
-import Memorize from './componets/Memorize/MemorizeBoard.jsx';
+import Memorize from './componets/Memorize/MemorizeEntryPoint.jsx';
 
 const App = () => {
   return (

@@ -27,6 +27,7 @@ export const buildDeck = () => {
     const card = {
       img: extractedImg,
       wasMatched: false,
+      id: Math.floor(Math.random() *5000)
     };
     cards.push(card);
     cards.push({ ...card });
