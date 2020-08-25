@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import './MemorizeBoard.css';
-import FrontImg from "../../assests/Icono_Demo_3.png";
+import FrontImg from "../../assests/Ícono_01.png";
 import { createRef } from 'react';
-import FlipCard from 'react-flipcard-2';
+import FlipCard from 'react-card-flip';
 
 class MemorizeCard extends Component {
   state = {
@@ -21,12 +21,9 @@ class MemorizeCard extends Component {
     console.log("Tarjeta dada vuelta", this.state);
   }
   render() {
-      if (this.state.isFlipped === true) {
-
-      }
     return (
-        <div className="card">
-          <FlipCard>
+        <div className="card" onClick={this.props.selectCard}>
+          <FlipCard isFlipped={this.props.beingCompared || this.props.wasMatched}>
             <div className="front card">
               <div className="image-container">
                 <img src={FrontImg} alt="" />

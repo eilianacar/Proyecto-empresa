@@ -9,7 +9,30 @@ class MemorizeEntryPoint extends Component {
     isComparing: false,
   };
 
-  
+  comparePair = (pair) => {
+    this.setState({
+      isComparing: true
+    });
+    setTimeout(() => {
+      const [cardOne, cardTwo] = pair;
+      let deck = this.state.deck;
+
+      if (cardOne.img === cardTwo.img) {
+        deck = deck.map((card) => {
+          if (card.img !== cardOne.img) {
+            return card;
+          }
+
+          return {...card, wasMatched: true};
+        })
+      }
+      this.setState({
+        selectedPair: [],
+        deck,
+        isComparing: false
+      })
+    }, 1000)
+  }
 
   selectCard = (card) => {
     if (
@@ -23,6 +46,10 @@ class MemorizeEntryPoint extends Component {
     this.setState({
       selectedPair,
     });
+
+    if (selectedPair.length === 2) {
+      this.comparePair(selectedPair);
+    }
   };
 
   render() {
