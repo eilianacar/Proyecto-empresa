@@ -1,6 +1,5 @@
 //Para mostrar la lista de los modulos
 import React from 'react';
-import Module from './Module.jsx';
 import { Link } from 'react-router-dom';
 
 const Modules = (props) => {

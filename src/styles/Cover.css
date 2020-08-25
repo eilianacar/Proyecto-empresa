@@ -37,13 +37,9 @@ h1{
 }
 .main{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: row;    
     align-items: center;
     margin: 3% 0% 0% 3%;
-}
-.video{
-    margin-left: 6%;
 }
 
 .header-logo{
@@ -54,4 +50,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.video{
+  border: none;
 }
