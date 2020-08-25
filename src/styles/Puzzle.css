@@ -1,0 +1,12 @@
+#entorno {
+    display: block;
+    margin:0 auto;
+}
+#fondo{
+    opacity: 0.3;
+    width: 50%;
+}
+.movil{
+    width: 235px;
+    height: 200px;
+}

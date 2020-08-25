@@ -15,6 +15,7 @@ import Home from './componets/home';
 import LoginModal from './componets/loginModal';
 import Modules from './componets/modules';
 import Ranking from './componets/ranking';
+import Puzzle from './componets/puzzle';
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/loginModal" component={LoginModal} />
         <Route path="/modules" component={Modules} />
         <Route path="/ranking" component={Ranking} />
+        <Route path="/puzzle" component={Puzzle} />
       </Switch>
     </Router>
   );
