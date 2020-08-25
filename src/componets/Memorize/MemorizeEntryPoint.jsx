@@ -1,13 +1,30 @@
 import React, { Component } from 'react';
 import { buildDeck } from './buildDeck';
 import MemorizeBoard from './MemorizeBoard.jsx';
+import './MemorizeBoard.css';
+import Counter from './Counter.jsx';
 
 class MemorizeEntryPoint extends Component {
   state = {
     deck: buildDeck(),
     selectedPair: [],
     isComparing: false,
+    triesNumber: 0
   };
+
+  resetGame = () => {
+    this.setState({
+      deck: buildDeck(),
+      selectedPair: [],
+      isComparing: false,
+      triesNumber: 0
+    });
+  }
+  checkForWinner = (deck) => {
+    if (deck.filter(card => !card.wasMatched).length === 0) {
+      alert(`Ganaste en ${this.state.triesNumber} intentos`);
+    }
+  }
 
   comparePair = (pair) => {
     this.setState({
@@ -26,10 +43,12 @@ class MemorizeEntryPoint extends Component {
           return {...card, wasMatched: true};
         })
       }
+      this.checkForWinner(deck);
       this.setState({
         selectedPair: [],
         deck,
-        isComparing: false
+        isComparing: false,
+        triesNumber: this.state.triesNumber + 1
       })
     }, 1000)
   }
@@ -54,10 +73,20 @@ class MemorizeEntryPoint extends Component {
 
   render() {
     return (
-      <div>
-        <MemorizeBoard deck={this.state.deck} selectedPair={this.state.selectedPair} selectCard={(card) => this.selectCard(card)}/>
+      <div className="board">
+        <Counter
+          triesNumber={this.state.triesNumber}
+          resetGame={() => this.resetGame()}
+        />
+        <button className="memorize-reset-btn" onClick={this.resetGame}>Reinicar juego</button>
+        <MemorizeBoard
+          deck={this.state.deck}
+          selectedPair={this.state.selectedPair}
+          selectCard={(card) => this.selectCard(card)}
+          triesNumber={this.state.triesNumber}
+        />
       </div>
-    )
+    );
   }
 }
 

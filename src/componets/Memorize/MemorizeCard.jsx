@@ -10,16 +10,6 @@ class MemorizeCard extends Component {
     flipped: []
   }
 
-  flipHandler = () => {
-    this.setState({
-      isFlipped: true,
-      flipped: []
-    });
-  };
-
-  componentDidUpdate() {
-    console.log("Tarjeta dada vuelta", this.state);
-  }
   render() {
     return (
         <div className="card" onClick={this.props.selectCard}>

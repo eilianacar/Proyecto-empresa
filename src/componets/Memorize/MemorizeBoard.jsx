@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './MemorizeBoard.css';
 import MemorizeCard from './MemorizeCard';
 import { buildDeck } from "./buildDeck.jsx";
-
+import Counter from './Counter.jsx';
 
 class MemorizeBoard extends Component {
   render() {
@@ -17,8 +17,12 @@ class MemorizeBoard extends Component {
         />;
       });
     return (
-      <main className="memorize-container ">
-        <div className="board">{shownCards}</div>
+      <main>
+        <article>
+          <section className="cards-wrapper">
+          {shownCards}
+          </section>
+        </article>
       </main>
     );
   }
