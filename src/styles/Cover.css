@@ -9,15 +9,14 @@
     font-style: normal;
   }
 .containerCover{
-    background: #72BAEC;
     height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
 }
-h1{
+.title{
     font-family: Rounded_Elegance;
-    color:white;
+    color:#572A99;;
 }
 .inicialButton{
    background:#572A99;

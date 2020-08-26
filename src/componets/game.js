@@ -2,10 +2,9 @@
 import React from 'react';
 import triviaAdults from '../data/triviaAdults.json'
 import '../styles/game.css'
-import HeaderPPTHootieHoo from '../assests/HeaderPPTHootieHoo.jpg'
 const Game = () => {
 
-    const handleOnClickAnswer = (isCorrect) => {
+  const handleOnClickAnswer = (isCorrect) => {
     const onOk = () => {
       alert("Respuesta Correcta")
     }
@@ -20,10 +19,9 @@ const Game = () => {
   }
 
   const questions = triviaAdults.questions || [];
-  return (    
+  return (
     <div className='questionContainer'>
-      <img className="banner" alt="" src={HeaderPPTHootieHoo}/>
-      <h1 className='titleTrivia'> ¡Demuetra lo aprendido!</h1>     
+      <h1 className='titleTrivia'> ¡Demuetra lo aprendido!</h1>
       {questions.map((question, qindex) => {
         return (
           <div key={`question-${qindex}`} className='question'>
@@ -31,7 +29,7 @@ const Game = () => {
             <div className='answers'>
               {question.answers.map((answer, ansindex) => {
                 return (
-                  <p className= 'ui floating message'
+                  <p className='ui floating message'
                     onClick={() => handleOnClickAnswer(answer.isCorrect)}
                     key={`answer-${ansindex}`}>
                     {answer.option}
