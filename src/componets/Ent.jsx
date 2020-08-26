@@ -22,7 +22,7 @@ const Ent = (props) => {
         </div>
         <div className='header-text'>
           <img className='img' src={Puma} alt='puma' width="15%" />
-          <Link to="/home">
+          <Link to="/puzzle">
             <button className='inicialButton'>¡Empecemos!</button>
           </Link>
         </div>
