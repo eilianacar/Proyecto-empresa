@@ -1,0 +1,152 @@
+{ 
+  "questions":[
+    {
+      "question": "¿COVID-19 es una enfermedad conlleva una crisis sanitaria producto de su alto grado de contagio?",
+      "answers":[
+        {
+          "option": "Verdadero",
+          "isCorrect": true
+        }, 
+        {
+          "option": "Falso",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "¿COVID-19 es una _______________ causada por el coronavirus que se ha descubierto más recientemente ?",
+      "answers":[
+        {
+          "option": "Enfermedad autoinmune",
+          "isCorrect": false
+        }, 
+        {
+          "option": "Enfermedad infecciosa ",
+          "isCorrect": true
+        },
+         {
+          "option": "Gripe común no infecciosa",
+          "isCorrect": false
+        }        
+      ]
+    },
+    {
+      "question": "¿Qué medidas de higiene personal puedes tomar para evitar el contagio del coronavirus (COVID-19)?",
+      "answers":[
+        {
+          "option": "Lavarse las manos con frecuencia utilizando agua y jabón o un desinfectante de manos que contengas 60% de alcohol",
+          "isCorrect": true
+        }, 
+        {
+          "option": "Lavarse la manos con agua 3 veces al día",
+          "isCorrect": false
+        },
+         {
+          "option": "Gripe común no infecciosa",
+          "isCorrect": false
+        }    
+      ]
+    },
+    {
+      "question": "¿La enfermedad por coronavirus (COVID-19) es un resfriado común?",
+      "answers":[        
+          {
+            "option": "Verdadero",
+            "isCorrect": false
+          }, 
+          {
+            "option": "Falso",
+            "isCorrect": true
+          }
+        ]
+    
+    },
+    {
+      "question": "¿Qué medidas de higiene personal puedes tomar para evitar el contagio del coronavirus (COVID-19)?",
+      "answers":[
+        {
+          "option": "Lavarse las manos con frecuencia utilizando agua y jabón o un desinfectante de manos que contengas 60% de alcohol",
+          "isCorrect": true
+        }, 
+        {
+          "option": "Lavarse la manos con agua 3 veces al día",
+          "isCorrect": false
+        },
+         {
+          "option": "Gripe común no infecciosa",
+          "isCorrect": false
+        }    
+      ]
+    },
+    {
+      "question": "¿Cuál es la distancia mínima que debe existir entre usted y cualquier persona?",
+      "answers":[
+        {
+          "option": "1 metro",
+          "isCorrect": true
+        }, 
+        {
+          "option": "3 metros",
+          "isCorrect": false
+        },
+         {
+          "option": "10 metros",
+          "isCorrect": false
+        },
+        {
+          "option": "5 metros",
+          "isCorrect": false
+        }   
+      ]
+    },
+    {
+      "question": "Una medida de autocuidado es evitar tocarse los ojos, la nariz y la boca",
+      "answers":[        
+          {
+            "option": "Verdadero",
+            "isCorrect": true
+          }, 
+          {
+            "option": "Falso",
+            "isCorrect": false
+          }
+        ]
+    
+    },
+    {
+      "question": "¿Cómo puedes proteger tu salud y la de los demás?",
+      "answers":[
+        {
+          "option": "Salir a la calle sin mascarillas",
+          "isCorrect": false
+        }, 
+        {
+          "option": "Mantener distanciamiento social",          
+          "isCorrect": true
+        },
+         {
+          "option": "Acudiendo a los centros de salud más cercano",
+          "isCorrect": false
+        },
+        {
+          "option": "5 metros",
+          "isCorrect": false
+        }   
+      ]
+    },
+    {
+      "question": "Las autoridades nacionales y de la salud recomiendan saludar a su circulo social con la mano, dar besos y abrazos ",
+      "answers":[        
+          {
+            "option": "Verdadero",
+            "isCorrect": false
+          }, 
+          {
+            "option": "Falso",
+            "isCorrect": true
+          }
+        ]
+    
+    }
+  ]
+}
