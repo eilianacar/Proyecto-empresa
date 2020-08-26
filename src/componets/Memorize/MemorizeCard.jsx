@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import './MemorizeBoard.css';
 import FrontImg from "../../assests/Ícono_01.png";
-import { createRef } from 'react';
 import FlipCard from 'react-card-flip';
 
 class MemorizeCard extends Component {
