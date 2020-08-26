@@ -1,44 +1,85 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../styles/Puzzle.css'
-const Puzzle = () => {
-    return (
-        <div>
-            <h1>Puzzle</h1>
-            <svg width='1000' height='1000' id='entorno'>
-                <g id='fondo'>
-                    <image href='../img/pumajabon.png' width='700' height='500' x='200' y='100' />
-                </g>
-                <g>
-                    <image xlinkHref='../img/fila-1-col-1.jpg' className='movil' />
-                </g>
-                <g>
-                    <image xlinkHref='../img/fila-1-col-2.jpg' className='movil' />
-                </g>
-                <g>
-                    <image xlinkHref='../img/fila-1-col-3.jpg' className='movil' />
-                </g>
-                <g>
-                    <image xlinkHref='../img/fila-2-col-1.jpg' className='movil' />
-                </g>
-                <g>
-                    <image xlinkHref='../img/fila-2-col-2.jpg' className='movil' />
-                </g>
-                <g>
-                    <image xlinkHref='../img/fila-2-col-3.jpg' className='movil' />
-                </g>
-                <g>
-                    <image xlinkHref='../img/fila-3-col-1.jpg' className='movil' />
-                </g>
-                <g>
-                    <image xlinkHref='../img/fila-3-col-2.jpg' className='movil' />
-                </g>
-                <g>
-                    <image xlinkHref='../img/fila-3-col-3.jpg' className='movil' />
-                </g>
+import imageUno from '../img/pumajabon.png'
+class Jigsaw extends Component {
+    state = {
+        pieces: [],
+        shuffled: [],
+        solved: []
+    };
 
-            </svg>
-        </div>
-    );
+    componentDidMount() {
+        const pieces = [...Array(9)]
+            .map((_, i) => (
+                {
+                    img: `ny_${('0' + (i + 1)).substr(-2)}.jpg`,
+                    order: i,
+                    board: 'shuffled'
+                }
+            ));
+
+        this.setState({
+            pieces,
+            shuffled: this.shufflePieces(pieces),
+            solved: [...Array(9)]
+        });
+    }
+    handleDrop(e, index, targetName) {
+        let target = this.state[targetName];
+        if (target[index]) return;
+
+        const pieceOrder = e.dataTransfer.getData('text');
+        const pieceData = this.state.pieces.find(p => p.order === +pieceOrder);
+        const origin = this.state[pieceData.board];
+
+        if (targetName === pieceData.board) target = origin;
+        origin[origin.indexOf(pieceData)] = undefined;
+        target[index] = pieceData;
+        pieceData.board = targetName;
+
+        this.setState({ [pieceData.board]: origin, [targetName]: target })
+    }
+
+    handleDragStart(e, order) {
+        const dt = e.dataTransfer;
+        dt.setData('text/plain', order);
+        dt.effectAllowed = 'move';
+    }
+
+    render() {
+        return (
+            <div className="jigsaw">
+                <ul className="jigsaw__shuffled-board">
+                    {this.state.shuffled.map((piece, i) => this.renderPieceContainer(piece, i, 'shuffled'))}
+                </ul>
+                <ol className="jigsaw__solved-board" style={{ backgroundImage: `url(${imageUno})` }}>
+                    {this.state.solved.map((piece, i) => this.renderPieceContainer(piece, i, 'solved'))}
+                </ol>
+            </div>
+        );
+    }
+    renderPieceContainer(piece, index, boardName) {
+        return (
+            <li key={index}
+                onDragOver={(e) => e.preventDefault()}
+                onDrop={(e) => this.handleDrop(e, index, boardName)}>
+                {piece &&
+                    <img draggable
+                        onDragStart={(e) => this.handleDragStart(e, piece.order)}
+                        src={require(`../img/${piece.img}`)} alt='fondo' />}
+            </li>
+        );
+    }
+    shufflePieces(pieces) {
+        const shuffled = [...pieces];
+
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+
+        return shuffled;
+    }
 }
 
-export default Puzzle;
+export default Jigsaw;
