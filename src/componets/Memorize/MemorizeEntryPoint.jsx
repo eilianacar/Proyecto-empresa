@@ -9,7 +9,8 @@ class MemorizeEntryPoint extends Component {
     deck: buildDeck(),
     selectedPair: [],
     isComparing: false,
-    triesNumber: 0
+    triesNumber: 0,
+    winnerMessage: ''
   };
 
   resetGame = () => {
@@ -22,7 +23,10 @@ class MemorizeEntryPoint extends Component {
   }
   checkForWinner = (deck) => {
     if (deck.filter(card => !card.wasMatched).length === 0) {
-      alert(`Ganaste en ${this.state.triesNumber} intentos`);
+     /*  alert(`Ganaste en ${this.state.triesNumber} intentos`); */
+     this.setState({
+       winnerMessage: `Ganaste en ${this.state.triesNumber} intentos`
+     })
     }
   }
 
@@ -42,14 +46,18 @@ class MemorizeEntryPoint extends Component {
 
           return {...card, wasMatched: true};
         })
+      } else {
+        this.setState({
+          triesNumber: this.state.triesNumber + 1
+        })
       }
       this.checkForWinner(deck);
       this.setState({
         selectedPair: [],
         deck,
-        isComparing: false,
-        triesNumber: this.state.triesNumber + 1
+        isComparing: false
       })
+      
     }, 1000)
   }
 
@@ -79,6 +87,7 @@ class MemorizeEntryPoint extends Component {
           resetGame={() => this.resetGame()}
         />
         <button className="memorize-reset-btn" onClick={this.resetGame}>Reinicar juego</button>
+        <p>{this.state.winnerMessage}</p>
         <MemorizeBoard
           deck={this.state.deck}
           selectedPair={this.state.selectedPair}
