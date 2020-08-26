@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import data from '../modulesv2.0.json';
-import style from '../styles/Modules.css';
+import data from '../modules.json';
+import '../styles/Modules.css';
 import image from '../assests/GAV_Personaje09.png';
 
 const Module = (props) => {
@@ -10,18 +10,15 @@ const Module = (props) => {
     console.log(data[0][module][topic]);
     let moduleTitle = data[0][module].title;
     let topicTitle = data[0][module][topic].title;
-    if (module !== '3') {
-      let topicContent = data[0][module][topic].content;
-      setModuleState({
-        module: `Módulo ${module}: ${moduleTitle}`,
-        topic: `Tema: ${topicTitle}`,
-        content: topicContent
+    let topicContent = data[0][module][topic].content;
+    setModuleState({
+      module: `Módulo ${module}: ${moduleTitle}`,
+      topic: `Tema: ${topicTitle}`,
+      content: topicContent
 
-      })
-      } else if (topic === '5') {
-        alert("con list items")
-      }
-    }
+    })
+     
+  }
     
   useEffect(() => {
     let module = props.match.params.module;

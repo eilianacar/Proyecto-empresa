@@ -1,6 +1,5 @@
 //Para mostrar la lista de los modulos
 import React from 'react';
-import Module from './Module.jsx';
 import { Link } from 'react-router-dom';
 
 const Modules = (props) => {
@@ -13,6 +12,12 @@ const Modules = (props) => {
       <ul>
         <li>
           <Link to={`${props.match.url}/1/topic1`}>Módulo 1, Tema 1</Link>
+        </li>
+        <li>
+          <Link to={`${props.match.url}/1/topic2`}>Módulo 1, Tema 2</Link>
+        </li>
+        <li>
+          <Link to={`${props.match.url}/1/topic3`}>Módulo 1, Tema 3</Link>
         </li>
         <li>
           <Link to={`${props.match.url}/2/topic1`}>Módulo 2, Tema 1</Link>
