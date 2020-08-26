@@ -1,5 +1,5 @@
 .board {
-  background-color: #72BAEC;
+  background-color: #72b9ec3b;
   border: 2px solid black;
   width: 70vw;
   min-height: 50vh;
@@ -27,7 +27,7 @@
 .front {
   width: 10vw;
   height: 10vw;
-  background-color: #64259D;
+  background-color:#64259D; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,7 +36,7 @@
 .back {
   width: 10vw;
   height: 10vw;
-  background-color: #B798C6;
+  background-color: #72BAEC;
   display: flex;
   justify-content: center;
   align-items: center;
