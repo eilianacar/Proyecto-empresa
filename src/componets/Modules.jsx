@@ -14,6 +14,12 @@ const Modules = (props) => {
           <Link to={`${props.match.url}/1/topic1`}>Módulo 1, Tema 1</Link>
         </li>
         <li>
+          <Link to={`${props.match.url}/1/topic2`}>Módulo 1, Tema 2</Link>
+        </li>
+        <li>
+          <Link to={`${props.match.url}/1/topic3`}>Módulo 1, Tema 3</Link>
+        </li>
+        <li>
           <Link to={`${props.match.url}/2/topic1`}>Módulo 2, Tema 1</Link>
         </li>
         <li>

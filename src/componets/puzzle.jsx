@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/Puzzle.css'
-import imageUno from './jigsaw/pumajabon.png'
+import imageUno from './jigsaw/pumajabon.png' 
+/*comentario para forzar push, bórrenlo nomás!*/ 
 class Jigsaw extends Component {
     state = {
         pieces: [],
