@@ -8,6 +8,19 @@
     font-weight:normal;
     font-style: normal;
   }
+@font-face {
+    font-family: "_H_HelveticaNeueInterface_0";
+    src: url('../assests/_H_HelveticaNeueInterface_0.ttf');
+    font-weight:normal;
+    font-style: normal;
+} 
+  h1{
+    font-family: Rounded_Elegance;
+  }
+  h2,
+  p{
+    font-family: _H_HelveticaNeueInterface_0;
+  }
 .containerCover{
     height: 100vh;
     width: 100%;
@@ -16,7 +29,8 @@
 }
 .title{
     font-family: Rounded_Elegance;
-    color:#572A99;;
+    color:#572A99;
+    width: 100%;
 }
 .inicialButton{
    background:#572A99;
@@ -30,6 +44,18 @@
    padding: 3%;
    margin: 34% 0% 0% 0%;
 }
+.profileButton{
+    background: #572A99;
+    color: white;
+    font-family: Rounded_Elegance;
+    width: 180%;
+    border-radius: 29px;
+    font-size: 27px;
+    border: none;
+    cursor: pointer;
+    padding: 10%;
+    margin: 15% 0% 0% -31%;
+ }
 .header-text{
     width: 45%;
     height: 85%;
@@ -40,7 +66,30 @@
     align-items: center;
     margin: 3% 0% 0% 3%;
 }
-
+.mainEnt{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0% 0% 0% 0%;
+    height: 100%;
+}
+.adult-profile{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.child-profile{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .header-logo{
     width: 52%;
     height: 11%;

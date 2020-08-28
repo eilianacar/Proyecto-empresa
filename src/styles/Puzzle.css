@@ -1,5 +1,7 @@
 .jigsaw{
-    text-align: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
   }
   
   .jigsaw__solved-board{
@@ -19,32 +21,31 @@
   }
   
   .jigsaw__solved-board{
-    width: 697px;
-    height: 528px;
+    width: 538px;
+    height: 379px;
     list-style-type: none;
     padding: 0;
     font-size: 0;
     border: 1px solid #ffd4cb;
     border-width: 1px 0 0 1px;
-    margin: -43% 0% 0% 40%;
+    margin: -51% 0% 23% 40%;
   }
   .jigsaw__shuffled-board{
-    margin: 6% 0% -5% 1%;
+    margin: 2% 0% 10% 1%;
     list-style-type: none;
     padding: 0;
     font-size: 0;
-    border: 1px solid #ffd4cb;
     width: 36%;
     height: 93vh;
   }
  .jigsaw li{
-    position: relative;
-    text-align: left;
-    display: inline-block; 
-    width: 232px;
-    height: 165px;
-    border: 1px solid #ffd4cb;
-    border-width: 0 1px 1px 0;
+  position: relative;
+  text-align: left;
+  display: inline-block;
+  width: 177px;
+  height: 119px;
+  border: 1px solid #ffd4cb;
+  border-width: 0 1px 1px 0;
   }
   
   .jigsaw li:empty:hover:before{
@@ -52,11 +53,12 @@
   } 
   
   .jigsaw li img{
-    width: 232px;
-    height: 175px;
+    width: 177px;
+    height: 129px;
     position: absolute;
     cursor: grab;
     transition: transform 200ms ease, box-shadow 200ms ease;
+    margin: -2% 0% 0% 0%;
   }
   
   .jigsaw li img:hover{
