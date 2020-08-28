@@ -4,7 +4,7 @@ import HeaderView from '../assests/HeaderPPTHootieHoo.jpg'
 const Header = () => {
     return (
         <header>
-            <img src={HeaderView} alt='header' height='100vh' width="100%" />
+            <img src={HeaderView} alt='header' height='130vh' width="100%" />
         </header>
     );
 }

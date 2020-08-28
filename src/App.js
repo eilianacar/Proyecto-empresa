@@ -13,6 +13,7 @@ import Cover from './componets/Cover';
 import Ent from './componets/Ent';
 import Game from './componets/game';
 import Home from './componets/home';
+import HomeNiño from './componets/homeNiño';
 import LoginModal from './componets/loginModal';
 import Modules from './componets/Modules.jsx';
 import Module from './componets/Module.jsx';
@@ -30,6 +31,7 @@ const App = () => {
         <Route path="/game/puzzle" component={Jigsaw} />
         <Route path="/game" component={Game} />
         <Route path="/home" component={Home} />
+        <Route path="/homeNiño" component={HomeNiño} />
         <Route path="/loginModal" component={LoginModal} />
         <Route path="/modules/:module/:topic" component={Module} />
         <Route path="/modules" component={Modules} />
