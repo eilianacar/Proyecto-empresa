@@ -42,8 +42,12 @@
   align-items: center;
 }
 
-.image-container {
+.memorize-image-container {
   width: 60%;
+}
+
+.memorize-image-container > img {
+  width: 100%;
 }
 
 .tries {
