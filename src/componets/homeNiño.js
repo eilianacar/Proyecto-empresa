@@ -3,6 +3,7 @@ import React from 'react';
 import '../styles/Home.css';
 import video from '../assests/HH_GanemosleAlVirus_Trailer.mp4';
 import equipo from '../assests/HH_GAV_PumaEspumaYElEscuadronPrevencion.png';
+import { Link } from 'react-router-dom';
 
 
 const Home = (props) => {
@@ -49,7 +50,9 @@ const Home = (props) => {
           <div className='contenedorVideo'>
             <p>Ve este vídeo</p>
             <video className='video' src={video} width="550" height="300" controls></video>
-            <button className='jugar'>Jugar</button>
+            <Link to="/game/child">
+              <button className='jugar'>Jugar</button>
+            </Link>
           </div>
         </div>
 
