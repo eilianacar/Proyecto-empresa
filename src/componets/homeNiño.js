@@ -34,8 +34,8 @@ const Home = (props) => {
 
           <button className="accordion">Módulo 2</button>
           <div className="panel">
-            <p>3- Cuidando las relaciones</p>
-            <p>4- Psicohigiene</p>
+            <p>3- Amigos y familia</p>
+            <p>4- ¿Cómo cuidarnos?</p>
           </div>
 
           <button className="accordion">Módulo 3</button>
