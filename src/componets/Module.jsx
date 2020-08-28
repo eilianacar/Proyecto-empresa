@@ -6,15 +6,18 @@ import image from '../assests/GAV_Personaje09.png';
 const Module = (props) => {
   const [moduleState, setModuleState] = useState('');
 
+  console.log("Módulo, Tema, Contenido e Imagen actuales: ", moduleState);
   const searchingData = (module, topic) => {
-    console.log(data[0][module][topic]);
+    console.log(data[0][module][topic].image);
     let moduleTitle = data[0][module].title;
     let topicTitle = data[0][module][topic].title;
     let topicContent = data[0][module][topic].content;
+    let imgUrl = data[0][module][topic].image;
     setModuleState({
       module: `Módulo ${module}: ${moduleTitle}`,
-      topic: `Tema: ${topicTitle}`,
-      content: topicContent
+      topic: `${topicTitle}`,
+      content: topicContent,
+      image: `${imgUrl}`
 
     })
      
@@ -40,8 +43,8 @@ const Module = (props) => {
             <p>                                                                         
               {moduleState.content}
             </p>
-            <div className="image-container">
-              <img src={image} alt="" />
+            <div className="module-image-container">
+              <img src={moduleState.image} alt="" />
             </div>
           </section>
           
