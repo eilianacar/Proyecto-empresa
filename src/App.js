@@ -12,6 +12,7 @@ import Header from './componets/Header'
 import Cover from './componets/Cover';
 import Ent from './componets/Ent';
 import Game from './componets/game';
+import ChildGame from './componets/gameChild.jsx'
 import Home from './componets/home';
 import HomeNiño from './componets/homeNiño';
 import LoginModal from './componets/loginModal';
@@ -29,9 +30,10 @@ const App = () => {
       <Switch>
         <Route path="/" exact component={Cover} />
         <Route path="/ent" component={Ent} />
-        <Route path="/game/memorize" exact component={Memorize}/>
+        <Route path="/game/memorize" exact component={Memorize} />
         <Route path="/game/puzzle" component={Jigsaw} />
-        <Route path="/game" component={Game} />
+        <Route path="/game/adult" component={Game} />
+        <Route path="/game/child" component={ChildGame} />
         <Route path="/home" component={Home} />
         <Route path="/homeNiño" component={HomeNiño} />
         <Route path="/loginModal" component={LoginModal} />
