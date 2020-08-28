@@ -3,6 +3,7 @@
   flex-flow: column wrap;
   align-items: center;
   color: white;
+  min-height: 120vh;
 }
 
 .heading {
@@ -15,7 +16,10 @@
 
 .contentWrapper {
   background-color: #B798C6;
-  width: 84vw;
+  width: 82vw;
+  min-height: 120vh;
+  padding-top: 3rem;
+  margin-bottom: 2rem;
 }
 
 h2 {
@@ -33,12 +37,13 @@ h2 {
 .content > p {
   width: 50%;
   margin-left: 1rem;
+  margin-top: 2rem;
 }
 
-.image-container {
+.module-image-container {
   width: 20vw;
 }
 
-.image-container > img {
+.module-image-container > img {
   width: 100%;
 }
