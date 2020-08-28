@@ -1,0 +1,49 @@
+{
+    "questions": [
+        {
+            "question": "¿Que se utiliza para lavarse las manos?",
+            "answers": [
+                {
+                    "option": "mascarilla",
+                    "isCorrect": false,
+                    "image": "https://firebasestorage.googleapis.com/v0/b/hootie-hoo1.appspot.com/o/Trivia-ni%C3%B1os%2FGAV_Personaje04.png?alt=media&token=34b2db1e-1b57-45c3-a311-beb68b63312d"
+                },
+                {
+                    "option": "jabon",
+                    "isCorrect": true,
+                    "image": "https://firebasestorage.googleapis.com/v0/b/hootie-hoo1.appspot.com/o/Trivia-ni%C3%B1os%2FGAV_Personaje05.png?alt=media&token=a322b052-b027-4eb9-abf3-cd1bf06742cc"
+                }
+            ]
+        },
+        {
+            "question": "¿Qué debes usar para tapar tu boca?",
+            "answers": [
+                {
+                    "option": "guante",
+                    "isCorrect": false,
+                    "image": "https://firebasestorage.googleapis.com/v0/b/hootie-hoo1.appspot.com/o/Trivia-ni%C3%B1os%2FGAV_Personaje06.png?alt=media&token=edff7b9e-e628-42d9-a084-b84e1ea3627b"
+                },
+                {
+                    "option": "mascarila",
+                    "isCorrect": true,
+                    "image": "https://firebasestorage.googleapis.com/v0/b/hootie-hoo1.appspot.com/o/Trivia-ni%C3%B1os%2FGAV_Personaje04.png?alt=media&token=34b2db1e-1b57-45c3-a311-beb68b63312d"
+                }
+            ]
+        },
+        {
+            "question": "¿Quien es el líder del escuadron prevención?",
+            "answers": [
+                {
+                    "option": "Puma",
+                    "isCorrect": true,
+                    "image": "https://firebasestorage.googleapis.com/v0/b/hootie-hoo1.appspot.com/o/Trivia-ni%C3%B1os%2FGAV_Personaje03.png?alt=media&token=a81a0c9f-be99-403e-908f-a4823a7f56da"
+                },
+                {
+                    "option": "coronavirus",
+                    "isCorrect": false,
+                    "image": "https://firebasestorage.googleapis.com/v0/b/hootie-hoo1.appspot.com/o/Trivia-ni%C3%B1os%2FGAV_Personaje07.png?alt=media&token=0d988b18-e9b6-432a-aef5-6aed4b3c8494"
+                }
+            ]
+        }
+    ]
+}

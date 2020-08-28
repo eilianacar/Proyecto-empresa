@@ -11,7 +11,8 @@ import './App.css';
 import Header from './componets/Header'
 import Cover from './componets/Cover';
 import Ent from './componets/Ent';
-import Game from './componets/game';
+import Game from './componets/game.jsx';
+import ChildGame from './componets/gameChild.jsx'
 import Home from './componets/home';
 import LoginModal from './componets/loginModal';
 import Modules from './componets/Modules.jsx';
@@ -19,6 +20,7 @@ import Module from './componets/Module.jsx';
 import Ranking from './componets/ranking';
 import Jigsaw from './componets/puzzle';
 import Footer from './componets/Footer'
+
 
 const App = () => {
   return (
@@ -28,7 +30,8 @@ const App = () => {
         <Route path="/" exact component={Cover} />
         <Route path="/ent" component={Ent} />
         <Route path="/game/puzzle" component={Jigsaw} />
-        <Route path="/game" component={Game} />
+        <Route path="/game/adult" component={Game} />
+        <Route path="/game/child" component={ChildGame} />
         <Route path="/home" component={Home} />
         <Route path="/loginModal" component={LoginModal} />
         <Route path="/modules/:module/:topic" component={Module} />

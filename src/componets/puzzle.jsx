@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/Puzzle.css'
 import imageUno from './jigsaw/pumajabon.png'
+import Timer from './Timer';
 class Jigsaw extends Component {
     state = {
         pieces: [],
@@ -48,7 +49,9 @@ class Jigsaw extends Component {
 
     render() {
         return (
+
             <div className="jigsaw">
+                <Timer></Timer>
                 <ul className="jigsaw__shuffled-board">
                     {this.state.shuffled.map((piece, i) => this.renderPieceContainer(piece, i, 'shuffled'))}
                 </ul>

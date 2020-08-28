@@ -8,18 +8,18 @@ import Buho from '../assests/GAV_Personaje21.png'
 const Ent = (props) => {
   return (
     <div className='containerCover'>
-      <main className='main'>
+      <main className='mainEnt'>
         <h1 className='title'>¡Para comenzar elige tu perfil! </h1>
         <div className='adult-profile'>
-          <img className='img' src={Buho} alt='buho' width="15%" />
+          <img className='img' src={Buho} alt='buho' width="42%" />
           <Link to="/home">
-            <button className='inicialButton'>Soy Adulto</button>
+            <button className='profileButton' >Soy Adulto</button>
           </Link>
         </div>
         <div className='child-profile'>
-          <img className='img' src={Puma} alt='puma' width="15%" />
+          <img className='img' src={Puma} alt='puma' width="42%" />
           <Link to="/home">
-            <button className='inicialButton'>Soy Niño</button>
+            <button className='profileButton'>Soy Niño</button>
           </Link>
         </div>
       </main>
