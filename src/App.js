@@ -23,6 +23,7 @@ import Memorize from './componets/Memorize/MemorizeEntryPoint.jsx';
 import Jigsaw from './componets/puzzle';
 import Footer from './componets/Footer'
 
+
 const App = () => {
   return (
     <Router>
