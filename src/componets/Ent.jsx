@@ -18,7 +18,7 @@ const Ent = (props) => {
         </div>
         <div className='child-profile'>
           <img className='img' src={Puma} alt='puma' width="15%" />
-          <Link to="/home">
+          <Link to="/homeNiño">
             <button className='inicialButton'>Soy Niño</button>
           </Link>
         </div>
