@@ -29,19 +29,27 @@ const Home = (props) => {
           <p className='tituloSeccion'>Módulos</p>
           <button className="accordion">Módulo 1</button>
           <div className="panel">
-            <p>1- ¿Que está pasando?</p>
-            <p>2- ¿Que es el covid-19?</p>
+            <p><Link to={`${props.match.url}/1/topic1`}>1- ¿Qué es el coronavirus?</Link></p>
+            <p><Link to={`${props.match.url}/1/topic2`}>2- ¿Cómo se originó el virus?</Link></p>
+            <p><Link to={`${props.match.url}/1/topic3`}>3- ¿Qué medidas se han tomado?</Link></p>
           </div>
 
           <button className="accordion">Módulo 2</button>
           <div className="panel">
-            <p>3- Cuidando las relaciones</p>
-            <p>4- Psicohigiene</p>
+            <p><Link to={`${props.match.url}/2/topic1`}>1- La socialización</Link></p>
+            <p><Link to={`${props.match.url}/2/topic2`}>2- ¿Cómo cambia la mente de los niños?</Link></p>
+            <p><Link to={`${props.match.url}/2/topic3`}>3- Mecanismos del miedo</Link></p>
+            <p><Link to={`${props.match.url}/2/topic5`}>4- Psicohigiene</Link></p>
+            <p><Link to={`${props.match.url}/2/topic10`}>5- Recomendaciones prácticas</Link></p>
           </div>
 
           <button className="accordion">Módulo 3</button>
           <div className="panel">
-            <p>5- Hábitos saludables</p>
+            <p><Link to={`${props.match.url}/3/topic1`}>1- Hábitos saludables</Link></p>
+            <p><Link to={`${props.match.url}/3/topic2`}>2- Condicionamiento operante</Link></p>
+            <p> <Link to={`${props.match.url}/3/topic3`}>3- Aprendizaje observacional</Link></p>
+            <p> <Link to={`${props.match.url}/3/topic6`}>4- Alimentación</Link></p>
+            <p><Link to={`${props.match.url}/3/topic7`}>5- Alimentación durante el confinamiento</Link></p>
           </div>
         </div>
 

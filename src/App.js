@@ -35,11 +35,12 @@ const App = () => {
         <Route path="/game/puzzle" component={Jigsaw} />
         <Route path="/game/adult" component={Game} />
         <Route path="/game/child" component={ChildGame} />
+        <Route path="/home/:module/:topic" component={Module} />
         <Route path="/home" component={Home} />
         <Route path="/homeNiño" component={HomeNiño} />
         <Route path="/loginModal" component={LoginModal} />
-        <Route path="/modules/:module/:topic" component={Module} />
-        <Route path="/modules" component={Modules} />
+        
+        {/* <Route path="/modules" component={Modules} /> */}
         <Route path="/ranking" component={Ranking} />
       </Switch>
       <Footer></Footer>

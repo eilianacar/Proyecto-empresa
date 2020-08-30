@@ -62,7 +62,7 @@
     background-color: #B798C6;
     color: #ffffff;
     width: 300px;
-    height: 100px;
+    /* height: 100px; --> lo comenté para que el height sea flexible */
     text-align: center;
     font-size: 16px;
     padding: 20px;
