@@ -5,7 +5,10 @@ import Video from '../assests/HH_GanemosleAlVirus_Trailer.mp4'
 import { Link } from "react-router-dom";
 import ColorsContext from './context/ColorsContext.jsx';
 
+
 const Cover = (props) => {
+
+
   return (
     <ColorsContext.Consumer>
       {context => {
@@ -27,7 +30,7 @@ const Cover = (props) => {
         )
       }}
     </ColorsContext.Consumer>
-    
+
   );
 }
 

@@ -66,3 +66,17 @@
     transform: scale(1.1);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   }  
+.finish{
+  background:#572A99;
+  color: white;
+  font-family: Rounded_Elegance;
+  width: 26%;
+  border-radius: 29px;
+  font-size: 27px;
+  border: none;
+  cursor: pointer;
+  padding: 2%;
+  margin: -19% 0% 6% 45%;
+  display: flex;
+    justify-content: center;
+}

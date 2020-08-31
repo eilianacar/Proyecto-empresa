@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import '../styles/Timer.css'
 const Timer = () => {
     /*   const [timerDays, setTimerDays] = useState('00'); */
-    const [timerHours, setTimerHours] = useState('00');
+    /* const [timerHours, setTimerHours] = useState('00'); */
     const [timerMinutes, setTimerMinutes] = useState('00');
     const [timerSeconds, setTimerSeconds] = useState('00');
 
@@ -15,8 +15,8 @@ const Timer = () => {
             const distance =/*  countdownDate - */ now;
 
             /*  const days = Math.floor(distance / (1000 * 60 * 60 * 24)); */
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            /*  const hours = Math.floor((distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))); */
+            const minutes = Math.floor((distance % (1000 * 1)) / 1000);
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             if (distance < 0) {
@@ -24,7 +24,7 @@ const Timer = () => {
                 clearInterval(interval.current);
             } else {
                 /*  setTimerDays(days); */
-                setTimerHours(hours);
+                /*            setTimerHours(hours); */
                 setTimerMinutes(minutes);
                 setTimerSeconds(seconds);
             }
@@ -42,17 +42,17 @@ const Timer = () => {
                 <p>{timerDays}</p>
                 <p><small>dias</small></p>
             </section> */}
-            <section>
+            {/* <section>
                 <p>{timerHours}</p>
                 <p><small>Horas</small></p>
+            </section> */}
+            <section>
+                <p className='timer-number'>{timerMinutes}</p>
+                <p className='timer-number'><small>Minutos</small></p>
             </section>
             <section>
-                <p>{timerMinutes}</p>
-                <p><small>Minutos</small></p>
-            </section>
-            <section>
-                <p>{timerSeconds}</p>
-                <p><small>Segundos</small></p>
+                <p className='timer-number'>{timerSeconds}</p>
+                <p className='timer-number'><small>Segundos</small></p>
             </section>
         </main>
     );
