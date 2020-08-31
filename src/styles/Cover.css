@@ -42,7 +42,7 @@
 }
 .inicialButton{
   transition: background-color .5s ease;
-   background:#572A99;
+   /* background:#572A99; */
    color: white;
    font-family: Rounded_Elegance;
    width: 55%;
