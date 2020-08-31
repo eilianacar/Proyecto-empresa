@@ -57,9 +57,8 @@ const Home = (props) => {
 
         <div className='contenedorDos'>
           <p className={context.visionProblemsMode === true ? "tituloSeccionEspecial visionProblemsBlack" : 'tituloSeccionEspecial purple'}>Juega y aprende</p>
-          <div div className = {
-            context.visionProblemsMode === true ? "contenedorVideo visionProblemsGrey" : 'contenedorVideo lightPurple'
-          } >
+          <div className={
+            context.visionProblemsMode === true ? "contenedorVideo visionProblemsGrey" : 'contenedorVideo lightPurple'}>
             <p className={context.visionProblemsMode === true ? "visionProblemsBlack" : 'lightBlue'}>Ve este vídeo</p>
             <video className='video' src={video} width="550" height="300" controls></video>
             <Link to="/game/adult">
