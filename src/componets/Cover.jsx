@@ -16,9 +16,9 @@ const Cover = (props) => {
           <div className='containerCover'>
             <main className='main'>
               <div className='header-text'>
-                <h1 className={context.visionProblemsMode === true ? "title visionProblemsBlackFont" : "title darkPurpleFont"}>¡Bienvenidos!</h1>
+                <h1 className={context.visionProblemsMode === true ? "title visionProblemsBlackFont" : "title darkPurpleFont"}>¡Bienvenidos/as!</h1>
                 <br></br>
-                <h1 className={context.visionProblemsMode === true ? "title visionProblemsBlackFont" : "title darkPurpleFont"}>Conoce más informacion sobre como prevenir<br></br> el COVID-19 y como enfrentarlo</h1>
+                <h1 className={context.visionProblemsMode === true ? "title visionProblemsBlackFont" : "title darkPurpleFont"}>Conoce más información sobre como prevenir<br></br> el COVID-19 y como enfrentarlo</h1>
                 <Link to="/ent">
                   <button className={context.visionProblemsMode === true ? "inicialButton visionProblemsBlack" : "inicialButton darkPurple"}>¡Empecemos!</button>
                 </Link>
