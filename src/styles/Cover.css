@@ -29,11 +29,11 @@
 }
 .title{
     font-family: Rounded_Elegance;
-    color:#572A99;
+    /* color:#572A99; */
     width: 100%;
 }
 .inicialButton{
-   background:#572A99;
+   /* background:#572A99; */
    color: white;
    font-family: Rounded_Elegance;
    width: 55%;
@@ -45,7 +45,7 @@
    margin: 34% 0% 0% 0%;
 }
 .profileButton{
-    background: #572A99;
+    /* background: #572A99; */
     color: white;
     font-family: Rounded_Elegance;
     width: 180%;
@@ -102,3 +102,4 @@
 .video{
   border: none;
 }
+

@@ -13,5 +13,60 @@ code {
 }
 
 html {
-  font-size: 65.2% /*1rem = 10px*/
+  font-size: 65.2% /*1rem = 10px --> solo si quieren usar rem, sino sáquenlo nomás ;D */
 }
+
+/* COLORES PREDETERMINADOS */
+.purple {
+  background-color: #64259D; /*visionProblemsBlue*/
+}
+
+.darkPurple {
+  background:#572A99;  /*visionProblemsBlack*/
+}
+
+.darkPurpleFont {   
+  color:#572A99; /*visionProblemsBlackFont*/
+}
+
+.lightPurple {
+  background-color: #B798C6; /*visionProblemsGreen*/
+}
+
+.lightBlue {
+  background-color: #72BAEC; /*visionProblemsRed*/
+}
+
+/* .lightBlue:hover { 
+  background-color: #A4D8F6; 
+} */
+
+.orange {
+  background-color: ;
+}
+
+.white {
+  background-color: white;
+}
+
+/* COLORES PARA PERSONAS CON PROBLEMAS DE VISIÓN */
+.visionProblemsBlue {
+  background-color: blue;
+}
+
+.visionProblemsRed {
+  background-color: red;
+}
+
+.visionProblemsGreen {
+  background-color: green;
+}
+
+.visionProblemsBlackFont {
+  color: black;
+}
+
+.visionProblemsBlack {
+  background-color: black;
+}
+
