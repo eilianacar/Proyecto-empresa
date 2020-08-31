@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import data from '../modules.json';
 import '../styles/Modules.css';
-import image from '../assests/GAV_Personaje09.png';
+import ColorsContext from './context/ColorsContext.jsx';
 
 const Module = (props) => {
   const [moduleState, setModuleState] = useState('');
@@ -32,25 +32,29 @@ const Module = (props) => {
  
 
   return (
-    <div>
-      <main className="container">
-        <section className="heading">                                                                           
-          <h1>{moduleState.module}</h1>
-        </section>
-        <section className="contentWrapper">
-          <h2>{moduleState.topic}</h2>
-          <section className="content">
-            <p>                                                                         
-              {moduleState.content}
-            </p>
-            <div className="module-image-container">
-              <img src={moduleState.image} alt="" />
-            </div>
-          </section>
-          
-        </section>
-      </main>
-    </div>
+    <ColorsContext.Consumer>
+      {context => {
+        return (
+          <div>
+            <main className="container">
+              <section className={context.visionProblemsMode === true ? "heading visionProblemsBlack" : "heading purple"}>
+                <h1>{moduleState.module}</h1>
+              </section>
+              <section className={context.visionProblemsMode === true ? "contentWrapper visionProblemsBlack" : "contentWrapper lightPurple"}>
+                <h2>{moduleState.topic}</h2>
+                <section className="content">
+                  <p>{moduleState.content}</p>
+                  <div className="module-image-container">
+                    <img src={moduleState.image} alt="" />
+                  </div>
+                </section>
+              </section>
+            </main>
+          </div>
+        );
+      }}
+    </ColorsContext.Consumer>
+    
   );
 }
 

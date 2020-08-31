@@ -16,6 +16,13 @@ html {
   font-size: 65.2% /*1rem = 10px --> solo si quieren usar rem, sino sáquenlo nomás ;D */
 }
 
+/* COLOR DE LINKS */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+
 /* COLORES PREDETERMINADOS */
 .purple {
   background-color: #64259D; /*visionProblemsBlue*/
@@ -70,3 +77,10 @@ html {
   background-color: black;
 }
 
+.visionProblemsGreyFont {
+   color: grey;
+}
+
+.visionProblemsGrey {
+  background-color: #181616;
+}
