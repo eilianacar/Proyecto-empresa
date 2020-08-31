@@ -25,7 +25,7 @@ a {
 
 /* COLORES PREDETERMINADOS */
 .purple {
-  background-color: #64259D; /*visionProblemsBlue*/
+  background-color: #64259D; /*visionProblemsBlack*/
 }
 
 .darkPurple {
@@ -37,11 +37,11 @@ a {
 }
 
 .lightPurple {
-  background-color: #B798C6; /*visionProblemsGreen*/
+  background-color: #B798C6; /*visionProblemsGrey*/
 }
 
 .lightBlue {
-  background-color: #72BAEC; /*visionProblemsRed*/
+  background-color: #72BAEC; /*visionProblemsBlack*/
 }
 
 /* .lightBlue:hover { 
@@ -49,7 +49,7 @@ a {
 } */
 
 .orange {
-  background-color: ;
+  background-color: /* naranjo que estamos usando */
 }
 
 .white {
@@ -57,18 +57,6 @@ a {
 }
 
 /* COLORES PARA PERSONAS CON PROBLEMAS DE VISIÓN */
-.visionProblemsBlue {
-  background-color: blue;
-}
-
-.visionProblemsRed {
-  background-color: red;
-}
-
-.visionProblemsGreen {
-  background-color: green;
-}
-
 .visionProblemsBlackFont {
   color: black;
 }
