@@ -4,11 +4,11 @@ import triviaAdults from '../data/triviaAdults.json'
 import '../styles/game.css'
 
 const Game = () => {
-  
+
   const [currentQuestion, setCurrentQuestion] = useState({});
   const [step, setStep] = useState(0);
   const [score, setScore] = useState(0);
-  const [result, setResult] = useState ("");
+  const [result, setResult] = useState("");
 
   useEffect(() => {
     setCurrentQuestion(triviaAdults.questions[0]);
@@ -24,33 +24,33 @@ const Game = () => {
     if ((step + 1) === totalQuestions) {
       return;
     }
-    if(result === ""){
+    if (result === "") {
       return;
     }
     setResult("");
     const nextStep = step + 1
     loadQuestion(nextStep);
     setStep(nextStep);
-  }; 
+  };
 
   const onBack = () => {
     const totalQuestions = triviaAdults.questions.length
-    if ((step -1) === totalQuestions) {
+    if ((step - 1) === totalQuestions) {
       return;
     }
-    if(result === ""){
+    if (result === "") {
       return;
     }
     setResult("");
     const backStep = step - 1
     loadQuestion(backStep);
     setStep(backStep);
-  }; 
+  };
   const handleOnClickAnswer = (isCorrect) => {
     const onOk = () => {
       setScore(score + 1)
       setResult("Respuesta Correcta")
-      
+
     }
     const onError = () => {
       setScore(score - 1)
@@ -74,20 +74,24 @@ const Game = () => {
         <div className='answers'>
           {currentQuestion.answers?.map((answer, ansindex) => {
             return (
-              <p className='ui floating message'
+              <p className='selectAnswer'
                 onClick={() => handleOnClickAnswer(answer.isCorrect)}
-                key={`answer-${ansindex}`}>
+                key={`answer-${ansindex}`}
+              >
                 {answer.option}
               </p>
             )
           })}
         </div>
         <h4>{result}</h4>
-        <button className="buttonNext"
-          onClick={onNext}>Siguiente
+        <div className='buttonSelect'>
+          <button className="buttonNext"
+            onClick={onNext}>Siguiente
         </button>
-        <button className="backButton"
-        onClick={onBack}>Atras</button>
+          <button className="backButton"
+            onClick={onBack}>Atras</button>
+        </div>
+
       </div>
     </div>
   )

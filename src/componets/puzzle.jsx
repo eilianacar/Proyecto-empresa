@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../styles/Puzzle.css'
 import imageUno from './jigsaw/pumajabon.png'
 import Timer from './Timer';
+import { Link } from 'react-router-dom';
 class Jigsaw extends Component {
     state = {
         pieces: [],
@@ -46,6 +47,11 @@ class Jigsaw extends Component {
         dt.setData('text/plain', order);
         dt.effectAllowed = 'move';
     }
+    handleOnClickAnswer = (score) => {
+
+        score += 1;
+
+    }
 
     render() {
         return (
@@ -58,6 +64,9 @@ class Jigsaw extends Component {
                 <ol className="jigsaw__solved-board" style={{ backgroundImage: `url(${imageUno})` }}>
                     {this.state.solved.map((piece, i) => this.renderPieceContainer(piece, i, 'solved'))}
                 </ol>
+                <Link to="/game/memorize">
+                    <button className='finish' >Terminado</button>
+                </Link>
             </div>
         );
     }

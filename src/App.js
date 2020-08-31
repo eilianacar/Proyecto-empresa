@@ -8,11 +8,12 @@ import {
 //<---------CSS-------------->
 import './App.css';
 //<---------Components------->
+
 import Header from './componets/Header'
 import Cover from './componets/Cover';
 import Ent from './componets/Ent';
 import Game from './componets/game';
-import ChildGame from './componets/gameChild.jsx'
+import ChildGame from './componets/gameChild';
 import Home from './componets/home';
 import HomeNiño from './componets/homeNiño';
 import LoginModal from './componets/loginModal';
@@ -21,7 +22,8 @@ import Module from './componets/Module.jsx';
 import Ranking from './componets/ranking';
 import Memorize from './componets/Memorize/MemorizeEntryPoint.jsx';
 import Jigsaw from './componets/puzzle';
-import Footer from './componets/Footer'
+import Footer from './componets/Footer';
+
 
 
 const App = () => {

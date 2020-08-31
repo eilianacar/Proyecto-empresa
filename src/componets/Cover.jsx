@@ -4,10 +4,13 @@ import '../styles/Cover.css'
 import Video from '../assests/HH_GanemosleAlVirus_Trailer.mp4'
 import { Link } from "react-router-dom";
 
+
 const Cover = (props) => {
+
+
   return (
     <div className='containerCover'>
-      <main className='main'>
+      <main className='main' >
         <div className='header-text'>
           <h1 className='title'>¡Bienvenidos!</h1>
           <br></br>
