@@ -7,7 +7,7 @@
 }
 
 .heading {
-  background-color: #64259D;
+ /*  background-color: #64259D; */
   width: 82vw;
   margin: 2rem;
   padding: 1rem;
@@ -15,7 +15,7 @@
 }
 
 .contentWrapper {
-  background-color: #B798C6;
+  /* background-color: #B798C6; */
   width: 82vw;
   min-height: 120vh;
   padding-top: 3rem;
