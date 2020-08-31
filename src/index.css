@@ -11,3 +11,64 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+html {
+  font-size: 65.2% /*1rem = 10px --> solo si quieren usar rem, sino sáquenlo nomás ;D */
+}
+
+/* COLOR DE LINKS */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* COLORES PREDETERMINADOS */
+.purple {
+  background-color: #64259D; /*visionProblemsBlack*/
+}
+
+.darkPurple {
+  background:#572A99;  /*visionProblemsBlack*/
+}
+
+.darkPurpleFont {   
+  color:#572A99; /*visionProblemsBlackFont*/
+}
+
+.lightPurple {
+  background-color: #B798C6; /*visionProblemsGrey*/
+}
+
+.lightBlue {
+  background-color: #72BAEC; /*visionProblemsBlack*/
+}
+
+/* .lightBlue:hover { 
+  background-color: #A4D8F6; 
+} */
+
+.orange {
+  background-color: /* naranjo que estamos usando */
+}
+
+.white {
+  background-color: white;
+}
+
+/* COLORES PARA PERSONAS CON PROBLEMAS DE VISIÓN */
+.visionProblemsBlackFont {
+  color: black;
+}
+
+.visionProblemsBlack {
+  background-color: black;
+}
+
+.visionProblemsGreyFont {
+   color: grey;
+}
+
+.visionProblemsGrey {
+  background-color: #181616;
+}

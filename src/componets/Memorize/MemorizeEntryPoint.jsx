@@ -25,9 +25,49 @@ class MemorizeEntryPoint extends Component {
     if (deck.filter(card => !card.wasMatched).length === 0) {
      /*  alert(`Ganaste en ${this.state.triesNumber} intentos`); */
      this.setState({
-       winnerMessage: `Ganaste en ${this.state.triesNumber} intentos`
+       winnerMessage: `Ganaste en ${this.state.triesNumber} intentos.`,
+       winner: true
      })
+     setTimeout(() => {
+       this.wonStars(this.state.triesNumber);
+     }, 1000)
     }
+  }
+
+  wonStars = (tries) => {
+    let prize = null;
+    switch (true) {
+      case (tries === 5):
+        prize = "Premio: 5 estrellas + 2 estrellas por completar el juego en el mínimo de intentos";
+         this.setState({
+           prize,
+         });
+        break;
+      case (tries > 5 || tries <= 8):
+        prize = "Premio: 5 estrellas";
+         this.setState({
+           prize,
+         });
+        break;
+      case (tries > 8 || tries <= 10):
+        prize = "Premio: 3 estrellas";
+         this.setState({
+           prize,
+         });
+        break;
+      case (tries > 10 || tries >= 15):
+        prize = "Premio: 2 estrellas";
+         this.setState({
+           prize,
+         });
+        break;
+      default:
+        prize = "Premio: 1 estrella";
+         this.setState({
+           prize,
+         });
+    }
+   
   }
 
   comparePair = (pair) => {
@@ -52,6 +92,7 @@ class MemorizeEntryPoint extends Component {
         })
       }
       this.checkForWinner(deck);
+      
       this.setState({
         selectedPair: [],
         deck,
@@ -88,6 +129,8 @@ class MemorizeEntryPoint extends Component {
         />
         <button className="memorize-reset-btn" onClick={this.resetGame}>Reinicar juego</button>
         <p>{this.state.winnerMessage}</p>
+        <p>{this.state.prize}</p>
+
         <MemorizeBoard
           deck={this.state.deck}
           selectedPair={this.state.selectedPair}
