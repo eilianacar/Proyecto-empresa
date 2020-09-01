@@ -88,7 +88,7 @@ const ChildGame = () => {
                         onClick={onBack}>Atras</button>
                 </div>
                 <Link to='/game/puzzle'>
-                    <button>Puzzle</button>
+                    <button className='puzzle-button'>Puzzle</button>
                 </Link>
 
             </div>
