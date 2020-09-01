@@ -1,7 +1,9 @@
+
 .jigsaw{
   text-align: center;
   display: flex;
   flex-direction: column;
+  background: #B798C6;
   }
   
   .jigsaw__solved-board{

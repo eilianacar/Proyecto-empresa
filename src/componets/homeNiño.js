@@ -1,80 +1,50 @@
 //Pantalla principal con todo el contenido, modulos, ranking y juegos
 import React from 'react';
-import '../styles/Home.css';
-import video from '../assests/HH_GanemosleAlVirus_Trailer.mp4';
+import '../styles/HomeChild.css';
+/* import video from '../assests/HootieHoo_GAV_M1_A1.mp4';
+import videoDos from '../assests/HootieHoo_GAV_M1_C2_Anim_v3.mp4'; */
+import puma from '../assests/GAV_Personaje12.png';
+import coronavirus from '../assests/GAV_Personaje07.png';
+import trivia from '../assests/trivia.png';
+import puzzle from '../assests/puzzle.png';
+import memorize from '../assests/memorize.png';
 import equipo from '../assests/HH_GAV_PumaEspumaYElEscuadronPrevencion.png';
 import { Link } from 'react-router-dom';
-import ColorsContext from './context/ColorsContext.jsx';
+import ReactPlayer from 'react-player'
 
 
-const Home = (props) => {
-  var acc = document.getElementsByClassName("accordion");
-  var i;
-
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-      this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    });
-  }
+const Home = () => {
 
   return (
-    <ColorsContext.Consumer>
-      {context => {
-        return (
-          <div className='home'>
-            <div className='contenidoHome'>
-              <div className='contenedorUno'>
-                <p className={context.visionProblemsMode === true ? "tituloSeccion visionProblemsBlack" : 'tituloSeccion purple'}>Módulos</p>
-                <button className={context.visionProblemsMode === true ? "accordion visionProblemsBlack" : "accordion lightBlue"}>Módulo 1</button>
-                <div className={context.visionProblemsMode === true ? "panel visionProblemsGrey" : 'panel lightPurple'}>
-                  <p>1- ¿Que está pasando?</p>
-                  <p>2- ¿Que es el covid-19?</p>
-                </div>
-
-                <button className={context.visionProblemsMode === true ? "accordion visionProblemsBlack" : "accordion lightBlue"}>Módulo 2</button>
-                <div className={context.visionProblemsMode === true ? "panel visionProblemsGrey" : 'panel lightPurple'}>
-                  <p>3- Amigos y familia</p>
-                  <p>4- ¿Cómo cuidarnos?</p>
-                </div>
-
-                <button className={context.visionProblemsMode === true ? "accordion visionProblemsBlack" : "accordion lightBlue"}>Módulo 3</button>
-                <div className={context.visionProblemsMode === true ? "panel visionProblemsGrey" : 'panel lightPurple'}>
-                  <p>5- Hábitos saludables</p>
-                </div>
-              </div>
-
-              <div className='contenedorDos'>
-                <p className={context.visionProblemsMode === true ? "tituloSeccionEspecial visionProblemsBlack" : 'tituloSeccionEspecial purple'}>Juega y aprende</p>
-                <div className={context.visionProblemsMode === true ? "contenedorVideo visionProblemsGrey" : 'contenedorVideo lightPurple'}>
-                  <p>Ve este vídeo</p>
-                  <video className='video' src={video} width="550" height="300" controls></video>
-                  <Link to="/game/child">
-                    <button className={context.visionProblemsMode === true ? "jugar visionProblemsBlack" : 'jugar purple'}>Jugar</button>
-                  </Link>
-                </div>
-              </div>
-
-              <div className='contenedorTres'>
-                <p className={context.visionProblemsMode === true ? "tituloSeccion visionProblemsBlack" : 'tituloSeccion purple'}>Ranking</p>
-                <p className={context.visionProblemsMode === true ? "p0 visionProblemsBlack" : 'p0 lightBlue'}></p>
-                <p className='p1'>1° Juanita</p>
-                <p className={context.visionProblemsMode === true ? "p2 visionProblemsGrey" : 'p2 lightPurple'}>2° Pepito</p>
-                <p className={context.visionProblemsMode === true ? "p1 visionProblemsGrey" : 'p1 lightPurple'}>3° Carmelita</p>
-                <p className='p2'>Tu lugar 12°</p>
-                <img className='equipo' src={equipo} alt='equipo' />
-              </div>
-            </div>
+    <main className='homeChild'>
+      <article className='box-video'>
+        <div className='header-box'>
+          <img src={coronavirus} alt='header' width="10%" height="30%" />
+          <h1 className='title-box'>Videos</h1>
+          <img src={puma} alt='puma' width="10%" height="30%" />
         </div>
-        )
-      }}
-    </ColorsContext.Consumer>
-    
+        <h1 className='title-cap'>Cap1. La Conora es nuestra.</h1>
+        <ReactPlayer className='videoHome' width={500}
+          height={300} url="https://www.youtube.com/watch?v=G2BHb6kWnRc" controls={true} />
+        <h1 className='title-cap'>Cap2. Una gran aventura en un mundo muy pequeño.</h1>
+        <ReactPlayer className='videoHome' width={500}
+          height={300} url="https://www.youtube.com/watch?v=tuILs6Zedco" controls={true} />
+      </article>
+      <article className='box-game'>
+        <h1 className='title-boxTwo'>¡Aprende jugando!</h1>
+        <div className='img-container'>
+          <Link to='/game/child'>
+            <img className='juegos' src={trivia} alt='trivia' width="10%" height="30%" />
+          </Link>
+          <Link to='/game/puzzle'>
+            <img className='juegos' src={puzzle} alt='puzzle' width="10%" height="30%" />
+          </Link>
+          <Link to='memorize'>
+            <img className='juegos' src={memorize} alt='memorize' width="10%" height="30%" />
+          </Link>
+        </div>
+      </article>
+    </main>
   );
 }
 
