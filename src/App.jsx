@@ -13,7 +13,7 @@ import Cover from './componets/Cover';
 import Ent from './componets/Ent';
 import Game from './componets/game.jsx';
 import ChildGame from './componets/gameChild.jsx'
-import Home from './componets/home';
+import Home from './componets/home.jsx';
 import HomeNiño from './componets/homeNiño.jsx';
 import menuChild from './componets/menuChild.jsx';
 import Modules from './componets/Modules.jsx';
@@ -42,8 +42,8 @@ const App = (props) => {
   return (
     <Fragment>
       <ColorsContext.Provider value={{
-            visionProblemsMode: colorsState.visionProblemsMode,
-          }}>
+        visionProblemsMode: colorsState.visionProblemsMode,
+      }}>
         <Header clicked={changeColorsHandler} />
       </ColorsContext.Provider>
       {/* <button
@@ -75,7 +75,7 @@ const App = (props) => {
 
               {/* <Route path="/modules" component={Modules} /> */}
               <Route path="/game" component={HomeGame} />
-           </Switch>
+            </Switch>
             <Footer></Footer>
           </Router>
         </ColorsContext.Provider>
