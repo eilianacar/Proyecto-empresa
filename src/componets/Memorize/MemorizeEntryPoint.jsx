@@ -18,7 +18,10 @@ class MemorizeEntryPoint extends Component {
       deck: buildDeck(),
       selectedPair: [],
       isComparing: false,
-      triesNumber: 0
+      triesNumber: 0,
+      winnerMessage: "",
+      winner: false,
+      prize: ""
     });
   }
   checkForWinner = (deck) => {
@@ -35,27 +38,28 @@ class MemorizeEntryPoint extends Component {
   }
 
   wonStars = (tries) => {
+    console.log(tries);
     let prize = null;
     switch (true) {
-      case (tries === 5):
+      case (tries <= 5):
         prize = "Premio: 5 estrellas + 2 estrellas por completar el juego en el mínimo de intentos";
          this.setState({
            prize,
          });
         break;
-      case (tries > 5 || tries <= 8):
+      case (tries > 5 && tries <= 8):
         prize = "Premio: 5 estrellas";
          this.setState({
            prize,
          });
         break;
-      case (tries > 8 || tries <= 10):
+      case (tries > 8 && tries <= 10):
         prize = "Premio: 3 estrellas";
          this.setState({
            prize,
          });
         break;
-      case (tries > 10 || tries >= 15):
+      case (tries > 10 && tries >= 15):
         prize = "Premio: 2 estrellas";
          this.setState({
            prize,
