@@ -24,6 +24,18 @@ a {
 
 
 /* COLORES PREDETERMINADOS */
+
+.shinyPink {
+  color: #9C27B0; /*visionProblemsWhiteFont*/
+}
+
+.orange {
+  background-color: #ff8300; /*visionProblemsBlack*/
+}
+.lightPink {
+  background-color: #f2bfff; /*visionProblemsGrey*/
+}
+
 .purple {
   background-color: #64259D; /*visionProblemsBlack*/
 }
@@ -67,4 +79,8 @@ a {
 
 .visionProblemsGrey {
   background-color: #181616;
+}
+
+.visionProblemsWhiteFont {
+  color: white;
 }

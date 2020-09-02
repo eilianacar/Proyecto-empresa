@@ -40,7 +40,7 @@ const Module = (props) => {
               <section className={context.visionProblemsMode === true ? "heading visionProblemsBlack" : "heading purple"}>
                 <h1>{moduleState.module}</h1>
               </section>
-              <section className={context.visionProblemsMode === true ? "contentWrapper visionProblemsBlack" : "contentWrapper lightPurple"}>
+              <section className={context.visionProblemsMode === true ? "contentWrapper visionProblemsGrey" : "contentWrapper lightPurple"}>
                 <h2>{moduleState.topic}</h2>
                 <section className="content">
                   <p>{moduleState.content}</p>
