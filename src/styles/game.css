@@ -99,7 +99,14 @@
   border: none;
   color:white;
 }
-
+.dato-button{
+  width: 20vw;
+    color: white;
+    padding: 2%;
+    border-radius: 34px;
+    border: none;
+    margin: 3% 0% 0% 76%;
+}
 .puzzle-button{
   width: 15vw;
   color: white;
