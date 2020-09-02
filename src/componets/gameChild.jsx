@@ -8,6 +8,7 @@ const ChildGame = () => {
     const [step, setStep] = useState(0);
     const [score, setScore] = useState(0);
     const [result, setResult] = useState("");
+    const [disabled, setDisabled] = useState(false);
 
     useEffect(() => {
         setCurrentQuestion(triviaChild.questions[0]);
@@ -19,6 +20,7 @@ const ChildGame = () => {
     };
 
     const onNext = () => {
+      setDisabled(false)
         const totalQuestions = triviaChild.questions.length
         if ((step + 1) === totalQuestions) {
             return;
@@ -46,6 +48,7 @@ const ChildGame = () => {
         setStep(backStep);
     };
     const handleOnClickAnswer = (isCorrect) => {
+      setDisabled(true)
         const onOk = () => {
             setScore(score + 1)
             setResult("Respuesta Correcta")
@@ -74,11 +77,12 @@ const ChildGame = () => {
                 <div className='answersChild'>
                     {currentQuestion.answers?.map((answer, ansindex) => {
                         return (
-                            <div className='cardTrivia'
+                            <button disabled={disabled}
+                            className='cardTrivia'
                                 onClick={() => handleOnClickAnswer(answer.isCorrect)}
                                 key={`answer-${ansindex}`}>
                                 <img src={answer.image} alt='img' width="70%" height="85%" />
-                            </div>
+                            </button>
                         )
                     })}
                 </div>

@@ -10,6 +10,7 @@ const Game = () => {
   const [step, setStep] = useState(0);
   const [score, setScore] = useState(0);
   const [result, setResult] = useState("");
+  const [disabled, setDisabled] = useState(false);
 
   useEffect(() => {
     setCurrentQuestion(triviaAdults.questions[0]);
@@ -17,10 +18,11 @@ const Game = () => {
 
   const loadQuestion = (s) => {
     const question = triviaAdults.questions[s];
-    setCurrentQuestion(question);
+    setCurrentQuestion(question);    
   };
 
   const onNext = () => {
+    setDisabled(false)
     const totalQuestions = triviaAdults.questions.length
     if ((step + 1) === totalQuestions) {
       return;
@@ -48,6 +50,7 @@ const Game = () => {
     setStep(backStep);
   };
   const handleOnClickAnswer = (isCorrect) => {
+    setDisabled(true)
     const onOk = () => {
       setScore(score + 1)
       setResult("Respuesta Correcta")
@@ -78,12 +81,13 @@ const Game = () => {
             <div className='answers'>
               {currentQuestion.answers?.map((answer, ansindex) => {
                 return (
-                  <p className={context.visionProblemsMode === true ? "selectAnswer visionProblemsBlack" : 'selectAnswer purple'}
+                  <button disabled={disabled}
+                  className={context.visionProblemsMode === true ? "selectAnswer visionProblemsBlack" : 'selectAnswer purple'}
                     onClick={() => handleOnClickAnswer(answer.isCorrect)}
                     key={`answer-${ansindex}`}
                   >
                     {answer.option}
-                  </p>
+                  </button>
                 )
               })}
             </div>
