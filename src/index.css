@@ -65,11 +65,12 @@ a {
   background-color: #72BAEC; /*visionProblemsBlack*/
 }
 
+.whiteColor {
+  color: white;
+}
 /* .lightBlue:hover { 
   background-color: #A4D8F6; 
-} */
-
-
+} 
 
 /* COLORES PARA PERSONAS CON PROBLEMAS DE VISIÓN */
 .visionProblemsBlackFont {
