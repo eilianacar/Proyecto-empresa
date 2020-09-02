@@ -3,6 +3,7 @@ import { buildDeck } from './buildDeck';
 import MemorizeBoard from './MemorizeBoard.jsx';
 import './MemorizeBoard.css';
 import Counter from './Counter.jsx';
+import ColorsContext from '../context/ColorsContext.jsx';
 
 class MemorizeEntryPoint extends Component {
   state = {
@@ -18,7 +19,10 @@ class MemorizeEntryPoint extends Component {
       deck: buildDeck(),
       selectedPair: [],
       isComparing: false,
-      triesNumber: 0
+      triesNumber: 0,
+      winnerMessage: "",
+      winner: false,
+      prize: ""
     });
   }
   checkForWinner = (deck) => {
@@ -35,27 +39,28 @@ class MemorizeEntryPoint extends Component {
   }
 
   wonStars = (tries) => {
+    console.log(tries);
     let prize = null;
     switch (true) {
-      case (tries === 5):
+      case (tries <= 5):
         prize = "Premio: 5 estrellas + 2 estrellas por completar el juego en el mínimo de intentos";
          this.setState({
            prize,
          });
         break;
-      case (tries > 5 || tries <= 8):
+      case (tries > 5 && tries <= 8):
         prize = "Premio: 5 estrellas";
          this.setState({
            prize,
          });
         break;
-      case (tries > 8 || tries <= 10):
+      case (tries > 8 && tries <= 10):
         prize = "Premio: 3 estrellas";
          this.setState({
            prize,
          });
         break;
-      case (tries > 10 || tries >= 15):
+      case (tries > 10 && tries >= 15):
         prize = "Premio: 2 estrellas";
          this.setState({
            prize,
@@ -122,22 +127,38 @@ class MemorizeEntryPoint extends Component {
 
   render() {
     return (
-      <div className="board">
-        <Counter
-          triesNumber={this.state.triesNumber}
-          resetGame={() => this.resetGame()}
-        />
-        <button className="memorize-reset-btn" onClick={this.resetGame}>Reinicar juego</button>
-        <p>{this.state.winnerMessage}</p>
-        <p>{this.state.prize}</p>
+      <ColorsContext.Consumer>
+        {context => {
+          return (
+            <div
+              className={
+                context.visionProblemsMode === true
+                  ? "board visionProblemsGrey"
+                  : "board boardColor"
+              }
+            >
+              <Counter
+                triesNumber={this.state.triesNumber}
+                resetGame={() => this.resetGame()}
+              />
+              <button className={context.visionProblemsMode === true ? "memorize-reset-btn visionProblemsWhite" : "memorize-reset-btn purple"} onClick={this.resetGame}>
+                Reinicar juego
+              </button>
+              <p>{this.state.winnerMessage}</p>
+              <p>{this.state.prize}</p>
 
-        <MemorizeBoard
-          deck={this.state.deck}
-          selectedPair={this.state.selectedPair}
-          selectCard={(card) => this.selectCard(card)}
-          triesNumber={this.state.triesNumber}
-        />
-      </div>
+              <MemorizeBoard
+                deck={this.state.deck}
+                selectedPair={this.state.selectedPair}
+                selectCard={(card) => this.selectCard(card)}
+                triesNumber={this.state.triesNumber}
+              />
+            </div>
+          );
+          
+        }}
+      </ColorsContext.Consumer>
+      
     );
   }
 }

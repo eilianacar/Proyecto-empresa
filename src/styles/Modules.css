@@ -32,6 +32,9 @@ h2 {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
+  margin: 1rem;
+  clear: both;
+  float: left;
 }
 
 .content > p {
@@ -42,6 +45,7 @@ h2 {
 
 .module-image-container {
   width: 20vw;
+  float: right;
 }
 
 .module-image-container > img {

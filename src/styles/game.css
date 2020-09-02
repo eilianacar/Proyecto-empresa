@@ -4,25 +4,25 @@
 }
 
 .questionContainer{
-  background: #B798C6;
+  /* background: #B798C6; */
   height: 100vh;
 }
 
 .titleTrivia{
-  background-color: #64259D;
+  /* background-color: #64259D; */
   color: #FFFFFF;  
 }
-.question{
+/* .question{
   border:#B798C6 1px solid;
-}
+} */
 .selectAnswer{
   display: flex;
-  color: #64259d;
+  /* color: #64259d; */
   justify-content: center;
   align-items: center;
   width: 65%;
   height: 10vh;
-  background: white;
+  /* background: white; */
   border-radius: 17px;
   cursor: pointer;
   transition: transform 200ms ease, box-shadow 200ms ease;
@@ -32,7 +32,7 @@
   z-index: 2;
   transform: scale(1.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-  background-color: #64259d;
+  /* background-color: #64259d; */
   color:white;
 }
 .banner{
@@ -50,7 +50,7 @@
   align-items: center;
   width: 21%;
   height: 27vh;
-  background: white;
+  /* background: white; */
   border-radius: 17px;
     cursor: pointer;
     transition: transform 200ms ease, box-shadow 200ms ease;
@@ -75,7 +75,7 @@
   flex-direction: row-reverse;
 }
 .buttonNext{
-  background: #64259D;
+  /* background: #64259D; */
   width: 15%;
   height: 8vh;
   border-radius: 26px;
@@ -84,7 +84,7 @@
   border: none;
 }
 .backButton{
-  background: #ff8402;
+  /* background: #ff8402; */
   width: 15%;
   height: 8vh;
   border-radius: 26px;
@@ -95,11 +95,11 @@
 
 .puzzle-button{
   width: 15vw;
-    color: white;
-    background: #c95aff;
-    padding: 13%;
-    border-radius: 34px;
-    border: none;
-    margin: -9% 0% 0% 215%;
-    height: 8vh;
+  color: white;
+  /* background: #c95aff; */
+  padding: 13%;
+  border-radius: 34px;
+  border: none;
+  margin: -9% 0% 0% 215%;
+  height: 8vh;
 }

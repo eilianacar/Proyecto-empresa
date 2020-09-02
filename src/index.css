@@ -24,8 +24,29 @@ a {
 
 
 /* COLORES PREDETERMINADOS */
+
+.boardColor {
+  background-color: #72b9ec3b;
+}
+
+.buttonPink {
+  background-color: #c95aff; /*visionProblemsDarkBlue*/
+}
+
+.shinyPink {
+  color: #9C27B0; /*visionProblemsWhiteFont*/
+}
+
+.orange {
+  background-color: #ff8300; /*visionProblemsBlack*/
+}
+.lightPink {
+  background-color: #f2bfff; /*visionProblemsGrey*/
+}
+
 .purple {
   background-color: #64259D; /*visionProblemsBlack*/
+  color: white;
 }
 
 .darkPurple {
@@ -48,9 +69,7 @@ a {
   background-color: #A4D8F6; 
 } */
 
-.white {
-  background-color: white;
-}
+
 
 /* COLORES PARA PERSONAS CON PROBLEMAS DE VISIÓN */
 .visionProblemsBlackFont {
@@ -65,6 +84,19 @@ a {
    color: grey;
 }
 
+.visionProblemsDarkBlue {
+  background-color: rgb(19, 9, 65);
+}
+
 .visionProblemsGrey {
   background-color: #181616;
+}
+
+.visionProblemsWhiteFont {
+  color: white;
+}
+
+.visionProblemsWhite {
+  background-color: white;
+  color: black;
 }

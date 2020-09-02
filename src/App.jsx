@@ -45,7 +45,7 @@ const App = () => {
     >
       <Router>
         <Header></Header>
-        <button onClick={() => changeColorsHandler()}>Cambiar color</button>
+        <button className="change-color-btn" onClick={() => changeColorsHandler()}>Tonos oscuros</button>
         <Switch>
           <Route path="/" exact component={Cover} />
           <Route path="/ent" component={Ent} />

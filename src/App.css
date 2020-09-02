@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.change-color-btn {
+  background-color: #ff8300;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  margin-left: 2rem;
+  transition: all .5s ease-in-out;
+  font-weight: bold;
+}
+
+.change-color-btn:hover {
+  transform: scale(1.1);
+}

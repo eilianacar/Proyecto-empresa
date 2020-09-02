@@ -3,6 +3,7 @@ import '../styles/Puzzle.css'
 import imageUno from './jigsaw/pumajabon.png'
 import Timer from './Timer';
 import { Link } from 'react-router-dom';
+import ColorsContext from './context/ColorsContext.jsx';
 class Jigsaw extends Component {
     state = {
         pieces: [],
@@ -55,8 +56,10 @@ class Jigsaw extends Component {
 
     render() {
         return (
-
-            <div className="jigsaw">
+          <ColorsContext.Consumer>
+            {context => {
+              return(
+              <div className="jigsaw">
                 <Timer></Timer>
                 <ul className="jigsaw__shuffled-board">
                     {this.state.shuffled.map((piece, i) => this.renderPieceContainer(piece, i, 'shuffled'))}
@@ -65,9 +68,14 @@ class Jigsaw extends Component {
                     {this.state.solved.map((piece, i) => this.renderPieceContainer(piece, i, 'solved'))}
                 </ol>
                 <Link to="/game/memorize">
-                    <button className='finish' >Terminado</button>
+                    <button className={context.visionProblemsMode === true ? "finish visionProblemsBlack" : "finish darkPurple"} >Terminado</button>
                 </Link>
-            </div>
+             </div>
+              )
+            }}
+          </ColorsContext.Consumer>
+
+            
         );
     }
     renderPieceContainer(piece, index, boardName) {
