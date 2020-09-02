@@ -101,3 +101,8 @@ a {
   background-color: white;
   color: black;
 }
+
+.visionProblemsFontWeight {
+  font-weight: bold;
+  font-size: 2rem;
+}

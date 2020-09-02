@@ -1,0 +1,5 @@
+.fixed-main-header {
+  position: fixed;
+  margin-top: -20rem;
+  z-index: 3;
+}

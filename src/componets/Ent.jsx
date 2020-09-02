@@ -17,13 +17,13 @@ const Ent = (props) => {
               <div className="adult-profile">
                 <img className="img" src={Buho} alt="buho" width="42%" />
                 <Link to="/home">
-                  <button className={context.visionProblemsMode === true ? "profileButton visionProblemsBlack" : "profileButton darkPurple"}>Soy Adulto</button>
+                  <button className={context.visionProblemsMode === true ? "profileButton visionProblemsBlack visionProblemsFontWeight" : "profileButton darkPurple"}>Soy Adulto</button>
                 </Link>
               </div>
               <div className="child-profile">
                 <img className="img" src={Puma} alt="puma" width="42%" />
                 <Link to="/menuChild">
-                  <button className={context.visionProblemsMode === true ? "profileButton visionProblemsBlack" : "profileButton darkPurple"}>Soy Niño/a</button>
+                  <button className={context.visionProblemsMode === true ? "profileButton visionProblemsBlack visionProblemsFontWeight" : "profileButton darkPurple"}>Soy Niño/a</button>
                 </Link>
               </div>
             </main>

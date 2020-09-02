@@ -68,7 +68,7 @@ class Jigsaw extends Component {
                     {this.state.solved.map((piece, i) => this.renderPieceContainer(piece, i, 'solved'))}
                 </ol>
                 <Link to="/game/memorize">
-                    <button className={context.visionProblemsMode === true ? "finish visionProblemsBlack" : "finish darkPurple"} >Terminado</button>
+                    <button className={context.visionProblemsMode === true ? "finish visionProblemsBlack visionProblemsFontWeight" : "finish darkPurple"} >Terminado</button>
                 </Link>
              </div>
               )

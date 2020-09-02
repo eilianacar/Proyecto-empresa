@@ -1,0 +1,109 @@
+.ranking-view-container {
+  /* background-color: #B798C6; */
+  width: 70vw;
+  margin: 0 auto;
+  min-height: 70vh;
+  margin-bottom: 2.5rem;
+  padding-top: 6rem;
+}
+
+.ranking-view-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.ranking-heading-container {
+  /* background-color: #64259D; */
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.ranking-heading2-container {
+  /* background-color: #72BAEC; */
+  width: 20vw;
+}
+
+.ranking-heading2-container > h2 {
+  color: white;
+}
+
+.ranking-container {
+  width: 20vw;
+}
+
+.ranking-container > ul {
+  list-style: none;
+}
+
+.ranking-container > ul > li {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #CACACA;
+
+}
+.ranking-container > ul > li:first-of-type {
+  background-color: #72BAEC;
+}
+
+.congrats-container {
+  width: 30vw;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.congrats-message {
+  width: 100%;
+}
+
+.input-container {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.enter-name-input {
+  width: 50%;
+  padding: 0.5rem;
+  margin: 0 auto;
+}
+
+.enter-name-btn {
+  width: 30%;
+  margin: 1rem auto;
+  /* background-color: #64259D; */
+  border: none;
+  padding: 1rem;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.back-btn {
+  width: 15%;
+  margin: 3rem 1rem;
+  /* background-color: #64259D; */
+  border: none;
+  padding: 1rem;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+
+.imgs-container {
+  /* background-color: #64259D; */
+  display: flex;
+  justify-content: center;
+}
+
+.treasure-chest-container {
+  width: 15vw;
+  margin: 3rem;
+
+}
+
+.treasure-chest-container > img {
+  width: 100%;
+}
