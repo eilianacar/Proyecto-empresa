@@ -1,0 +1,166 @@
+.homeChild{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.box-video{
+    height: 130vh;
+    width: 100%;
+    margin: 2% 0% 2% 0%;
+    text-align: center;
+    border-radius: 25px;
+}
+.box-game{
+    height: 130vh;
+    width: 100%;
+    margin: 2% 0% 2% 0%;
+    text-align: center;
+    border-radius: 25px;
+}
+.header-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 3%;
+}
+.title-box{
+    width: 27%;
+    border-radius: 30px;
+}
+.title-cap{
+    font-size: 1.5rem;
+    margin: 4% 0% 0% 0%;
+    text-align: center;
+    width: 100%;
+}
+.title-boxTwo{
+    width: 39%;
+    border-radius: 33px;
+    color: #572A99;
+    margin: 5% 0% 0% 29%;
+}
+.img-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 2% 0% 0% 10%;
+}
+.juegos{
+    width: 85%;
+    height: 93%;
+
+}
+.videoHome{
+    margin: 3% 0% 0% 4%;
+}
+.video-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0% 0% 0% 0%;
+}
+.cap-video{
+    width: 46%;
+    height: 62vh;
+    margin: 2% 1% 0% 2%;
+    border-radius: 20px;
+}
+.button-jugar{
+    transition: background-color .5s ease;
+    color: white;
+    font-family: Rounded_Elegance;
+    width: 30%;
+    border-radius: 29px;
+    font-size: 27px;
+    border: none;
+    cursor: pointer;
+    padding: 2%;
+    margin: 3% 0% 0% 0%;
+}
+@media screen and (max-width:600px){
+    .homeChild{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .box-video{
+        height: 130vh;
+        width: 100%;
+        margin: 0% 0% 2% 0%;
+        text-align: center;
+        border-radius: 25px;
+    }
+    .box-game{
+        height: 130vh;
+        width: 100%;
+        margin: 2% 0% 2% 0%;
+        text-align: center;
+        border-radius: 25px;
+    }
+    .header-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 3%;
+    }
+    .title-box{
+        width: 75%;
+        border-radius: 30px;
+    }
+    .title-cap{
+        font-size: 1.5rem;
+        margin: 4% 0% 0% 0%;
+        text-align: center;
+        width: 100%;
+    }
+    .title-boxTwo{
+        width: 39%;
+        border-radius: 33px;
+        color: white;
+        margin: 5% 0% 0% 29%;
+    }
+    .img-container{
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 8%;
+    }
+    .juegos{
+        width: 60%;
+        height: 93%;
+    
+    }
+    .videoHome{
+        margin: 3% 0% 0% 4%;
+    }
+    .video-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0% 0% 0% 0%;
+    }
+    .cap-video{
+        width: 96%;
+        height: 62vh;
+        margin: 2% 1% 0% 2%;
+        border-radius: 20px;
+    }
+    .button-jugar{
+        transition: background-color .5s ease;
+        color: white;
+        font-family: Rounded_Elegance;
+        width: 70%;
+        border-radius: 29px;
+        font-size: 27px;
+        border: none;
+        cursor: pointer;
+        padding: 3%;
+        margin: 3% 0% 7% 0%;
+    }
+    .corona{
+        display: none;
+    }
+     
+}
