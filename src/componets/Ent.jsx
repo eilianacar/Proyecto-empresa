@@ -22,7 +22,7 @@ const Ent = (props) => {
               </div>
               <div className="child-profile">
                 <img className="img" src={Puma} alt="puma" width="42%" />
-                <Link to="/homeNiño">
+                <Link to="/menuChild">
                   <button className={context.visionProblemsMode === true ? "profileButton visionProblemsBlack" : "profileButton darkPurple"}>Soy Niño/a</button>
                 </Link>
               </div>
