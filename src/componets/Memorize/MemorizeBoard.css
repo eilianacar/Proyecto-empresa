@@ -63,3 +63,26 @@
   margin-left: 1rem;
   font-weight: bold;
 }
+@media screen and (max-width:600px){
+  .board {
+    border: 2px solid black;
+    width: 91vw;
+    min-height: 50vh;
+    margin: 2rem auto;
+  }
+  .card {
+    width: 20vw;
+    height: 16vw;
+    margin: 1rem;
+  }
+  
+  .front {
+    width: 19vw;
+    height: 19vw;
+    background-color: #64259D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2%;
+  }
+}

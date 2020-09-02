@@ -1,0 +1,100 @@
+.containerMenu{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.titleMenu{
+    font-family: Rounded_Elegance;
+    /* color: #572A99; */
+    width: 70%;
+    margin-left: 32%;
+}
+.menu-videos{
+    transition: background-color .5s ease;
+    color: white;
+    font-family: Rounded_Elegance;
+    width: 41%;
+    border-radius: 29px;
+    font-size: 27px;
+    border: none;
+    cursor: pointer;
+    padding: 3%;
+    margin-right: 13%;
+
+    }
+    .menu-game{
+        transition: background-color .5s ease;
+        /* background: #572A99; */
+        color: white;
+        font-family: Rounded_Elegance;
+        width: 45%;
+        border-radius: 29px;
+        font-size: 27px;
+        border: none;
+        cursor: pointer;
+        padding: 3%;
+    }
+    .stars-text{
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: -4%;
+    }
+    .imgPuma{
+        width: 35%;
+    }
+    .imgStars{
+        width: 79%;
+        height: 39%;
+        margin-left: 24%;
+    }
+    .button-menu{
+        width: 100%;
+        margin: 15%;
+    }
+@media screen and (max-width:600px){
+    .menu-videos,.menu-game{
+        transition: background-color .5s ease;
+        color: white;
+        width: 78%;
+        border-radius: 29px;
+        font-size: 25px;
+        border: none;
+        padding: 5%;
+        margin: 16% 0% 0% 7%;
+        font-family: Rounded_Elegance;
+        }
+        .imgStars{
+            margin-bottom: 9%;
+            height: 19%;
+            width: 90%;
+        }
+        .stars-text{
+            width: 84%;
+            height: 34%;
+            margin: -75% 0% 19% -10%;
+        }
+        .containerMenu{
+            flex-wrap: wrap;
+            flex-grow: 1;
+            max-width: 100%;
+            max-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .imgPuma{
+           display: none;
+        }
+        .titleMenu{
+            width: 98%;
+            margin-left: 23%;
+        }
+        .button-menu{
+            width: 100%;
+            margin: 0% 0% 0% 23%;
+        }
+}

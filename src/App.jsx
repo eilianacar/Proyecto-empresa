@@ -14,11 +14,12 @@ import Ent from './componets/Ent';
 import Game from './componets/game';
 import ChildGame from './componets/gameChild.jsx'
 import Home from './componets/home';
-import HomeNiño from './componets/homeNiño';
-import LoginModal from './componets/loginModal';
+import HomeNiño from './componets/homeNiño.jsx';
+import menuChild from './componets/menuChild.jsx';
 import Modules from './componets/Modules.jsx';
 import Module from './componets/Module.jsx';
 import Ranking from './componets/ranking.jsx';
+import HomeGame from './componets/homeGame.jsx';
 import Memorize from './componets/Memorize/MemorizeEntryPoint.jsx';
 import Jigsaw from './componets/puzzle';
 import Footer from './componets/Footer'
@@ -70,11 +71,11 @@ const App = (props) => {
               <Route path="/home/:module/:topic" component={Module} />
               <Route path="/home" component={Home} />
               <Route path="/homeNiño" component={HomeNiño} />
-              <Route path="/loginModal" component={LoginModal} />
+              <Route path="/menuChild" component={menuChild} />
 
               {/* <Route path="/modules" component={Modules} /> */}
-              <Route path="/ranking" component={Ranking} />
-            </Switch>
+              <Route path="/game" component={HomeGame} />
+           </Switch>
             <Footer></Footer>
           </Router>
         </ColorsContext.Provider>
