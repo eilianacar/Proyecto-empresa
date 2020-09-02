@@ -1,5 +1,5 @@
 .board {
-  background-color: #72b9ec3b;
+  /* background-color: #72b9ec3b; */
   border: 2px solid black;
   width: 64vw;
   min-height: 50vh;
@@ -55,8 +55,10 @@
 }
 
 .memorize-reset-btn {
-  background-color: white;
+  /* background-color: white; */
   border: none;
-  padding: .5rem;
+  border-radius: 5px;
+  padding: 1rem;
   margin-left: 1rem;
+  font-weight: bold;
 }

@@ -3,7 +3,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  background: #B798C6;
+  /* background: #B798C6; */
   }
   
   .jigsaw__solved-board{
@@ -69,7 +69,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   }  
 .finish{
-  background:#572A99;
+ /*  background:#572A99; */
   color: white;
   font-family: Rounded_Elegance;
   width: 26%;

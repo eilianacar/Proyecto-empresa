@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import triviaChild from '../data/triviaChild.json'
 import { Link } from 'react-router-dom';
+import ColorsContext from './context/ColorsContext.jsx';
 
 const ChildGame = () => {
     const [currentQuestion, setCurrentQuestion] = useState({});
@@ -62,12 +63,14 @@ const ChildGame = () => {
 
     const questions = triviaChild.questions || [];
     return (
-        <div className='questionContainer'>
-            <h1 className='titleTrivia'> ¡Demuetra lo aprendido!</h1>
-            <h3>Tu puntuación es: {score}</h3>
+      <ColorsContext.Consumer>
+        {context => {
+          return(
+          <div className={context.visionProblemsMode === true ? "questionContainer visionProblemsGrey" : "questionContainer lightPurple"}>
+            <h1 className={context.visionProblemsMode === true ? "titleTrivia visionProblemsBlack" : 'titleTrivia purple'}> ¡Demuetra lo aprendido!</h1>
+            <h3 className={context.visionProblemsMode === true ? "visionProblemsWhiteFont" : "visionProblemsBlackFont"}>Tu puntuación es: {score}</h3>
             <div className='questionChild'>
                 <p>{currentQuestion.question}</p>
-
                 <div className='answersChild'>
                     {currentQuestion.answers?.map((answer, ansindex) => {
                         return (
@@ -81,18 +84,22 @@ const ChildGame = () => {
                 </div>
                 <h4>{result}</h4>
                 <div className='buttonSelect'>
-                    <button className="buttonNext"
-                        onClick={onNext}>Siguiente
+                  <button className={context.visionProblemsMode === true ? "buttonNext visionProblemsBlack" : 'buttonNext purple'} onClick={onNext}>Siguiente
                  </button>
-                    <button className="backButton"
+                    <button className={
+                context.visionProblemsMode === true ? "backButton visionProblemsBlack" : 'backButton purple'}
                         onClick={onBack}>Atras</button>
                 </div>
                 <Link to='/game/puzzle'>
-                    <button className='puzzle-button'>Puzzle</button>
+                    <button className={context.visionProblemsMode === true ? "puzzle-button visionProblemsDarkBlue" : "puzzle-button buttonPink"}>Puzzle</button>
                 </Link>
 
-            </div>
+               </div>
         </div>
+          )
+        }}
+      </ColorsContext.Consumer>
+       
     )
 }
 

@@ -3,6 +3,7 @@ import { buildDeck } from './buildDeck';
 import MemorizeBoard from './MemorizeBoard.jsx';
 import './MemorizeBoard.css';
 import Counter from './Counter.jsx';
+import ColorsContext from '../context/ColorsContext.jsx';
 
 class MemorizeEntryPoint extends Component {
   state = {
@@ -126,22 +127,38 @@ class MemorizeEntryPoint extends Component {
 
   render() {
     return (
-      <div className="board">
-        <Counter
-          triesNumber={this.state.triesNumber}
-          resetGame={() => this.resetGame()}
-        />
-        <button className="memorize-reset-btn" onClick={this.resetGame}>Reinicar juego</button>
-        <p>{this.state.winnerMessage}</p>
-        <p>{this.state.prize}</p>
+      <ColorsContext.Consumer>
+        {context => {
+          return (
+            <div
+              className={
+                context.visionProblemsMode === true
+                  ? "board visionProblemsGrey"
+                  : "board boardColor"
+              }
+            >
+              <Counter
+                triesNumber={this.state.triesNumber}
+                resetGame={() => this.resetGame()}
+              />
+              <button className={context.visionProblemsMode === true ? "memorize-reset-btn visionProblemsWhite" : "memorize-reset-btn purple"} onClick={this.resetGame}>
+                Reinicar juego
+              </button>
+              <p>{this.state.winnerMessage}</p>
+              <p>{this.state.prize}</p>
 
-        <MemorizeBoard
-          deck={this.state.deck}
-          selectedPair={this.state.selectedPair}
-          selectCard={(card) => this.selectCard(card)}
-          triesNumber={this.state.triesNumber}
-        />
-      </div>
+              <MemorizeBoard
+                deck={this.state.deck}
+                selectedPair={this.state.selectedPair}
+                selectCard={(card) => this.selectCard(card)}
+                triesNumber={this.state.triesNumber}
+              />
+            </div>
+          );
+          
+        }}
+      </ColorsContext.Consumer>
+      
     );
   }
 }
