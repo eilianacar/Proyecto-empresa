@@ -1,154 +1,185 @@
 .home {
-   display: flex;
-   flex-direction: column;
-}
-
-.contenidoHome {
-    display: flex;
-    flex-direction: start;
-    padding: 100px;
-}
-
-.contenedorUno {
-    width: 500px;
     display: flex;
     flex-direction: column;
-    align-items: center;   
-}
-
-.tituloSeccion {
-    /* background-color: #64259D; */
-    border-radius: 15px;
-    width: 300px;
-    height: 100px;
-    font-family: 'Rounded_Elegance';
-    color: #ffffff;
-    font-size: 30px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    text-align: center;
-    padding: 30px;
-}
-
-.tituloSeccionEspecial {
-    /* background-color: #64259D; */
-    border-radius: 15px;
-    width: 300px;
-    height: 100px;
-    font-family: 'Rounded_Elegance';
-    color: #ffffff;
-    font-size: 30px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    text-align: center;
-    padding: 26px;
-}
-
-.accordion {
-    /* background: #72BAEC; */
-    font-family: 'Rounded_Elegance';
-    color: #ffffff;
-    width: 300px;
-    height: 50px;
-    font-size: 25px;
-    border: none;
-    transition: 0.4s;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.active, .accordion:hover {
-    background-color: #A4D8F6; 
-}
-
-.panel {
-    /* background-color: #B798C6; */
-    color: #ffffff;
-    width: 300px;
-    /* height: 100px; --> lo comenté para que el height sea flexible */
-    text-align: center;
-    font-size: 16px;
-    padding: 20px;
-}
-
-.contenedorDos {
+    width: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+ }
+ .contenidoHome {
+    display: flex;
+    flex-direction: row;
+    margin: 1% 0% 0% 0%;
+    width: 100%;
+ }
+ .contenedorUno {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0px 50px 0px 50px;
-    text-align: center;
-}
-
-.contenedorVideo {
-    /* background-color: #B798C6; */
-    width: 700px;
+    margin-left: 11%;
+    position: relative;
+ }
+ .texto {
+     font-size: 95%;
+ }
+ .textoTitulo {
+     font-family: 'Rounded_Elegance';
+     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     color: #64259D;
+     font-size: 200%;
+ }
+ .Buho {
+    height: 43%;
+ }
+ .tituloSeccion {
+     /* background-color: #64259D; */
+     border-radius: 15px;
+     width: 300px;
+     height: 100px;
+     font-family: 'Rounded_Elegance';
+     color: #FFFFFF;
+     font-size: 30px;
+     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     text-align: center;
+     padding: 30px;
+ }
+ .tituloSeccionEspecial {
+     /* background-color: #64259D; */
+     border-radius: 15px;
+     width: 300px;
+     height: 100px;
+     font-family: 'Rounded_Elegance';
+     color: #FFFFFF;
+     font-size: 30px;
+     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     text-align: center;
+     padding: 26px;
+ }
+ .accordion {
+     /* background: #72BAEC; */
+     font-family: 'Rounded_Elegance';
+     color: #FFFFFF;
+     width: 300px;
+     height: 50px;
+     font-size: 25px;
+     border: none;
+     transition: 0.4s;
+     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ }
+ .active, .accordion:hover {
+     background-color: #A4D8F6; 
+ }
+ .panel {
+     /* background-color: #B798C6; */
+     color: #FFFFFF;
+     width: 300px;
+     /* height: 100px; --> lo comenté para que el height sea flexible */
+     text-align: center;
+     font-size: 16px;
+     padding: 20px;
+ }
+ .contenedorDos {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 0px 0px 15px 15px;
-}
-
-.contenedorVideo > p {
-    /* background: #72BAEC; */
-    color: #ffffff;
-    width: 700px;
-    height: 50px;
-    font-family: 'Rounded_Elegance';
-    padding: 10px;
-    font-size: 25px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
-}
-
-.jugar {
-    width: 250px;
-    height: 50px;
-    /* background: #64259D; */
+    position: relative;
+    margin: 4% 0% 0% 11%;
+ }
+ .jugar {
+    width: 400%;
+    height: 200%;
+    position: relative;
     border-radius: 48px;
-    color: #ffffff;
+    color: #FFFFFF;
     border: none;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin: 50px 0px 50px 0px;
+    margin: 14% 0% 0% -169%;
     font-size: 25px;
-}
-
-.contenedorTres {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-}
-
-.p0 {
-    width: 300px;
-    height: 50px;
-    /* background-color: #72BAEC; */
-    margin: 0px;
-}
-
-.p1 {
-    width: 300px;
-    height: 50px;
-    background-color: #CACACA;
-    color: #ffffff;
-    font-family: 'Rounded_Elegance';
-    font-size: 25px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 5px;
-    margin: 0px;
-}
-
-.p2 {
-    width: 300px;
-    height: 50px;
-    /* background-color: #B798C6; */
-    color: #ffffff;
-    font-family: 'Rounded_Elegance';
-    font-size: 25px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 5px;
-    margin: 0px;
-}
-
-.equipo {
-    width: 300px;
-    margin: 50px 0px 0px 0px;
-}
-
+ }
+ @media screen and (max-width:600px){
+    .home {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        flex-wrap: wrap;
+     }
+     .contenidoHome {
+        display: flex;
+        flex-direction: row;
+        margin: 1% 0% 0% 0%;
+        width: 100%;
+     }
+     .contenedorUno {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 100% 0% 0% 12%;
+        position: relative;
+        width: 100%;
+     }
+     .texto {
+         font-size: 95%;
+     }
+     .textoTitulo {
+         font-family: 'Rounded_Elegance';
+         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+         color: #64259D;
+         font-size: 200%;
+     }
+     .Buho {
+        height: 43%;
+        display:none;
+     }
+     .tituloSeccion {
+display: none;
+     }
+     .tituloSeccionEspecial {
+         /* background-color: #64259D; */
+         border-radius: 15px;
+         width: 300px;
+         height: 100px;
+         font-family: 'Rounded_Elegance';
+         color: #FFFFFF;
+         font-size: 30px;
+         text-align: center;
+         padding: 26px;
+     }
+     .accordion {
+         /* background: #72BAEC; */
+         font-family: 'Rounded_Elegance';
+         color: #FFFFFF;
+         width: 300px;
+         height: 50px;
+         font-size: 25px;
+         border: none;
+         transition: 0.4s;
+         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     }
+     .active, .accordion:hover {
+         background-color: #A4D8F6; 
+     }
+     .panel {
+         /* background-color: #B798C6; */
+         color: #FFFFFF;
+         width: 300px;
+         /* height: 100px; --> lo comenté para que el height sea flexible */
+         text-align: center;
+         font-size: 16px;
+         padding: 20px;
+     }
+     .contenedorDos {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        margin: 4% 0% 0% -84%;
+     }
+     .jugar {
+        width: 400%;
+        height: 200%;
+        position: relative;
+        border-radius: 48px;
+        color: #FFFFFF;
+        border: none;
+        margin: 27% 0% 0% 13%;
+        font-size: 25px;
+     }
+ }

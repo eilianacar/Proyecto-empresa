@@ -82,3 +82,89 @@
   display: flex;
     justify-content: center;
 }
+@media screen and (max-width:600px){
+  
+.jigsaw{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* background: #B798C6; */
+  }
+  
+  .jigsaw__solved-board{
+    position: relative;
+    background-size: cover;
+  }
+  
+   .jigsaw__solved-board:before{
+    content: '';
+    background-color: rgba(255, 255, 255, 0.6);
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .jigsaw__solved-board{
+    width: 360px;
+    height: 256px;
+    list-style-type: none;
+    padding: 0;
+    font-size: 0;
+    /* border: 2px solid #2200ff; */
+    border-width: 1px 0 0 1px;
+    margin: -141% 0% 1% 3%;
+  }
+  .jigsaw__shuffled-board{
+    list-style-type: none;
+    padding: 0;
+    font-size: 0;
+    width: 100%;
+    height: 55vh;
+    margin: 58% 0% 0% 0%;
+  }
+ .jigsaw li{
+  position: relative;
+  text-align: left;
+  display: inline-block;
+  width: 117px;
+  height: 78px;
+  border: 1px solid #ffd4cb;
+  border-width: 0 1px 1px 0;
+  }
+  
+  .jigsaw li:empty:hover:before{
+    opacity: 1;
+  } 
+  
+  .jigsaw li img{
+    width: 117px;
+    height: 78px;
+    position: absolute;
+    cursor: grab;
+    transition: transform 200ms ease, box-shadow 200ms ease;
+    margin: 76% 0% 0% 0%;
+  }
+  
+  .jigsaw li img:hover{
+    z-index: 2;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  }  
+.finish{
+ /*  background:#572A99; */
+ color: white;
+ font-family: Rounded_Elegance;
+ width: 51%;
+ border-radius: 29px;
+ font-size: 27px;
+ border: none;
+ cursor: pointer;
+ padding: 3%;
+ margin: 83% 0% 15% 25%;
+ display: flex;
+ justify-content: center;
+}
+}

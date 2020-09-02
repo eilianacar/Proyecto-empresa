@@ -20,7 +20,7 @@ const HomeGame = (props) => {
             <img className='juegos' src={memorize} alt='memorize' width="10%" height="30%" />
           </Link>
           <Link to='/homeNiño'>
-            <img className='juegos' src={VideosChild} alt='memorize' width="10%" height="30%" />
+            <img className='juegosTwo' src={VideosChild} alt='memorize' width="10%" height="30%" />
           </Link>
         </div>
       </article>
