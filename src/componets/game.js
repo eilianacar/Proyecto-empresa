@@ -3,7 +3,8 @@ import React, { useState, useEffect } from 'react';
 import triviaAdults from '../data/triviaAdults.json';
 import '../styles/game.css';
 import ColorsContext from './context/ColorsContext.jsx';
-
+import Next from '../assests/BotonDerecha_Naveg_Sobre.jpg'
+import Back from '../assests/BotonIzquierda_Naveg_Sobre.jpg'
 const Game = () => {
 
   const [currentQuestion, setCurrentQuestion] = useState({});
@@ -18,7 +19,7 @@ const Game = () => {
 
   const loadQuestion = (s) => {
     const question = triviaAdults.questions[s];
-    setCurrentQuestion(question);    
+    setCurrentQuestion(question);
   };
 
   const onNext = () => {
@@ -73,40 +74,36 @@ const Game = () => {
     <ColorsContext.Consumer>
       {context => {
         return (
-        <div className={context.visionProblemsMode === true ? "questionContainer visionProblemsGrey" : 'questionContainer lightPurple'} style={{ border: "solid 1px #000" }}>
-          <h1 className={context.visionProblemsMode === true ? "titleTrivia visionProblemsBlack" : 'titleTrivia purple'}> ¡Demuetra lo aprendido!</h1>
-          <h4>Tu puntuación es: {score}</h4>
-          <div className='question'>
-            <p>{currentQuestion.question}</p>
-            <div className='answers'>
-              {currentQuestion.answers?.map((answer, ansindex) => {
-                return (
-                  <button disabled={disabled}
-                  className={context.visionProblemsMode === true ? "selectAnswer visionProblemsBlack" : 'selectAnswer purple'}
-                    onClick={() => handleOnClickAnswer(answer.isCorrect)}
-                    key={`answer-${ansindex}`}
-                  >
-                    {answer.option}
-                  </button>
-                )
-              })}
-            </div>
-            <h4>{result}</h4>
-            <div className='buttonSelect'>
-              <button className={
-                context.visionProblemsMode === true ? "buttonNext visionProblemsBlack" : 'buttonNext purple'}
-                onClick={onNext}>Siguiente</button>
-              <button className={
-                context.visionProblemsMode === true ? "backButton visionProblemsBlack" : 'backButton purple'}
-                onClick={onBack}>Atras</button>
-            </div>
+          <div className={context.visionProblemsMode === true ? "questionContainer visionProblemsGrey" : 'questionContainer lightPurple'} style={{ border: "solid 1px #000" }}>
+            <h1 className={context.visionProblemsMode === true ? "titleTrivia visionProblemsBlack" : 'titleTrivia purple'}> ¡Demuetra lo aprendido!</h1>
+            <h4>Tu puntuación es: {score}</h4>
+            <div className='question'>
+              <p>{currentQuestion.question}</p>
+              <div className='answers'>
+                {currentQuestion.answers?.map((answer, ansindex) => {
+                  return (
+                    <button disabled={disabled}
+                      className={context.visionProblemsMode === true ? "selectAnswer visionProblemsBlack" : 'selectAnswer purple'}
+                      onClick={() => handleOnClickAnswer(answer.isCorrect)}
+                      key={`answer-${ansindex}`}
+                    >
+                      {answer.option}
+                    </button>
+                  )
+                })}
+              </div>
+              <h4>{result}</h4>
+              <div className='buttonSelect'>
+                <button onClick={onNext} className="buttonNext" ><img className="img-next" src={Next} alt='next' /> Siguiente</button>
+                <button onClick={onBack} className="backButton" ><img className="img-back" src={Back} alt='back' /> Atras</button>
+              </div>
 
+            </div>
           </div>
-        </div>
         )
       }}
     </ColorsContext.Consumer>
-    
+
   )
 }
 
