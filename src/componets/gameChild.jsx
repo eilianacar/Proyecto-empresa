@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 import ColorsContext from './context/ColorsContext.jsx';
 import Next from '../assests/BotonDerecha_Naveg_Sobre.jpg'
 import Back from '../assests/BotonIzquierda_Naveg_Sobre.jpg'
-
 const ChildGame = () => {
     const [currentQuestion, setCurrentQuestion] = useState({});
     const [step, setStep] = useState(0);
     const [score, setScore] = useState(0);
     const [result, setResult] = useState("");
+    const [disabled, setDisabled] = useState(false);
 
     useEffect(() => {
         setCurrentQuestion(triviaChild.questions[0]);
@@ -21,6 +21,7 @@ const ChildGame = () => {
     };
 
     const onNext = () => {
+        setDisabled(false)
         const totalQuestions = triviaChild.questions.length
         if ((step + 1) === totalQuestions) {
             return;
@@ -48,6 +49,7 @@ const ChildGame = () => {
         setStep(backStep);
     };
     const handleOnClickAnswer = (isCorrect) => {
+        setDisabled(true)
         const onOk = () => {
             setScore(score + 1)
             setResult("Respuesta Correcta")
@@ -72,19 +74,20 @@ const ChildGame = () => {
                         <h1 className={context.visionProblemsMode === true ? "titleTrivia visionProblemsBlack" : 'titleTrivia purple'}> ¡Demuetra lo aprendido!</h1>
                         <h3 className={context.visionProblemsMode === true ? "visionProblemsWhiteFont" : "visionProblemsBlackFont"}>Tu puntuación es: {score}</h3>
                         <div className='questionChild'>
-                            <p className='pregunta'>{currentQuestion.question}</p>
+                            <p>{currentQuestion.question}</p>
                             <div className='answersChild'>
                                 {currentQuestion.answers?.map((answer, ansindex) => {
                                     return (
-                                        <div className='cardTrivia'
+                                        <button disabled={disabled}
+                                            className='cardTrivia'
                                             onClick={() => handleOnClickAnswer(answer.isCorrect)}
                                             key={`answer-${ansindex}`}>
                                             <img src={answer.image} alt='img' width="70%" height="85%" />
-                                        </div>
+                                        </button>
                                     )
                                 })}
                             </div>
-                            <h1>{result}</h1>
+                            <h4>{result}</h4>
                             <div className='buttonSelect'>
                                 <button onClick={onNext} className="buttonNext" ><img className="img-next" src={Next} alt='next' /> Siguiente</button>
                                 <button onClick={onBack} className="backButton" ><img className="img-back" src={Back} alt='back' /> Atras</button>

@@ -5,13 +5,13 @@ import '../styles/game.css';
 import ColorsContext from './context/ColorsContext.jsx';
 import Next from '../assests/BotonDerecha_Naveg_Sobre.jpg'
 import Back from '../assests/BotonIzquierda_Naveg_Sobre.jpg'
-
 const Game = () => {
 
   const [currentQuestion, setCurrentQuestion] = useState({});
   const [step, setStep] = useState(0);
   const [score, setScore] = useState(0);
   const [result, setResult] = useState("");
+  const [disabled, setDisabled] = useState(false);
 
   useEffect(() => {
     setCurrentQuestion(triviaAdults.questions[0]);
@@ -23,6 +23,7 @@ const Game = () => {
   };
 
   const onNext = () => {
+    setDisabled(false)
     const totalQuestions = triviaAdults.questions.length
     if ((step + 1) === totalQuestions) {
       return;
@@ -50,6 +51,7 @@ const Game = () => {
     setStep(backStep);
   };
   const handleOnClickAnswer = (isCorrect) => {
+    setDisabled(true)
     const onOk = () => {
       setScore(score + 1)
       setResult("Respuesta Correcta")
@@ -74,22 +76,23 @@ const Game = () => {
         return (
           <div className={context.visionProblemsMode === true ? "questionContainer visionProblemsGrey" : 'questionContainer lightPurple'} style={{ border: "solid 1px #000" }}>
             <h1 className={context.visionProblemsMode === true ? "titleTrivia visionProblemsBlack" : 'titleTrivia purple'}> ¡Demuetra lo aprendido!</h1>
-            <h3>Tu puntuación es: {score}</h3>
+            <h4>Tu puntuación es: {score}</h4>
             <div className='question'>
-              <p className='pregunta'>{currentQuestion.question}</p>
+              <p>{currentQuestion.question}</p>
               <div className='answers'>
                 {currentQuestion.answers?.map((answer, ansindex) => {
                   return (
-                    <p className={context.visionProblemsMode === true ? "selectAnswer visionProblemsBlack" : 'selectAnswer purple'}
+                    <button disabled={disabled}
+                      className={context.visionProblemsMode === true ? "selectAnswer visionProblemsBlack" : 'selectAnswer purple'}
                       onClick={() => handleOnClickAnswer(answer.isCorrect)}
                       key={`answer-${ansindex}`}
                     >
                       {answer.option}
-                    </p>
+                    </button>
                   )
                 })}
               </div>
-              <h1>{result}</h1>
+              <h4>{result}</h4>
               <div className='buttonSelect'>
                 <button onClick={onNext} className="buttonNext" ><img className="img-next" src={Next} alt='next' /> Siguiente</button>
                 <button onClick={onBack} className="backButton" ><img className="img-back" src={Back} alt='back' /> Atras</button>
