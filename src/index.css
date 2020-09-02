@@ -68,6 +68,9 @@ a {
 .whiteColor {
   color: white;
 }
+.white {
+  background: white;
+}
 /* .lightBlue:hover { 
   background-color: #A4D8F6; 
 } 

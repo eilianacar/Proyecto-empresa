@@ -11,7 +11,7 @@ import './App.css';
 import Header from './componets/Header'
 import Cover from './componets/Cover';
 import Ent from './componets/Ent';
-import Game from './componets/game';
+import Game from './componets/game.jsx';
 import ChildGame from './componets/gameChild.jsx'
 import Home from './componets/home';
 import HomeNiño from './componets/homeNiño.jsx';

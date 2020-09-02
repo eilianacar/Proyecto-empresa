@@ -16,14 +16,12 @@
     flex-direction: column;
     align-items: center;
     margin-left: 11%;
-    position: relative;
  }
  .texto {
      font-size: 95%;
  }
  .textoTitulo {
      font-family: 'Rounded_Elegance';
-     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
      color: #64259D;
      font-size: 200%;
  }
@@ -38,7 +36,6 @@
      font-family: 'Rounded_Elegance';
      color: #FFFFFF;
      font-size: 30px;
-     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
      text-align: center;
      padding: 30px;
  }
@@ -81,13 +78,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
     margin: 4% 0% 0% 11%;
  }
  .jugar {
     width: 400%;
     height: 200%;
-    position: relative;
     border-radius: 48px;
     color: #FFFFFF;
     border: none;
@@ -112,16 +107,15 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 100% 0% 0% 12%;
-        position: relative;
+        margin: 79% 0% 0% 8%;
         width: 100%;
+        z-index: 2;
      }
      .texto {
          font-size: 95%;
      }
      .textoTitulo {
          font-family: 'Rounded_Elegance';
-         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
          color: #64259D;
          font-size: 200%;
      }
@@ -170,16 +164,16 @@ display: none;
         display: flex;
         flex-direction: column;
         align-items: end;
-        margin: 4% 0% 0% -84%;
-     }
+        margin: 4% 15% 0% -76%;
+        width: 100%;
+    }
      .jugar {
-        width: 400%;
-        height: 200%;
-        position: relative;
+        width: 414%;
+        height: 158%;
         border-radius: 48px;
         color: #FFFFFF;
         border: none;
-        margin: 27% 0% 0% 13%;
+        margin: 27% 0% 0% 47%;
         font-size: 25px;
      }
  }

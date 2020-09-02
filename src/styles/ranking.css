@@ -107,3 +107,33 @@
 .treasure-chest-container > img {
   width: 100%;
 }
+@media screen and (max-width:600px){
+  .ranking-view-container {
+    /* background-color: #B798C6; */
+    width: 100vw;
+    margin: 0 auto;
+    min-height: 70vh;
+    margin-bottom: 2.5rem;
+    padding-top: 6rem;
+}
+.congrats-container {
+  width: 88vw;
+  display: flex;
+  flex-flow: column wrap;
+}
+.ranking-container {
+  width: 76vw;
+}
+.ranking-heading2-container {
+  /* background-color: #72BAEC; */
+  width: 76vw;
+}
+.ranking-heading-container {
+  /* background-color: #64259D; */
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  width: 100vw;
+  margin: 0 auto;
+}
+}

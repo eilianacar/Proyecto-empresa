@@ -20,16 +20,16 @@ const Module = (props) => {
       image: `${imgUrl}`
 
     })
-     
+
   }
-    
+
   useEffect(() => {
     let module = props.match.params.module;
     let topic = props.match.params.topic;
     console.log(module, topic);
     searchingData(module, topic);
   }, [])
- 
+
 
   return (
     <ColorsContext.Consumer>
@@ -45,7 +45,7 @@ const Module = (props) => {
                 <section className="content">
                   <p>{moduleState.content}</p>
                   <div className="module-image-container">
-                    <img src={moduleState.image} alt="" />
+                    <img className='img-modules' src={moduleState.image} alt="" />
                   </div>
                 </section>
               </section>
@@ -54,7 +54,7 @@ const Module = (props) => {
         );
       }}
     </ColorsContext.Consumer>
-    
+
   );
 }
 
