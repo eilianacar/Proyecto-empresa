@@ -1,5 +1,5 @@
 //<---------Librerias-------->
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,14 +18,15 @@ import HomeNiño from './componets/homeNiño';
 import LoginModal from './componets/loginModal';
 import Modules from './componets/Modules.jsx';
 import Module from './componets/Module.jsx';
-import Ranking from './componets/ranking';
+import Ranking from './componets/ranking.jsx';
 import Memorize from './componets/Memorize/MemorizeEntryPoint.jsx';
 import Jigsaw from './componets/puzzle';
 import Footer from './componets/Footer'
 import ColorsContext from './componets/context/ColorsContext.jsx';
+import CuriousFact from './componets/CuriousFact.jsx';
 
 
-const App = () => {
+const App = (props) => {
   const [colorsState, setColorsState] = useState({ visionProblemsMode: false });
 
   const changeColorsHandler = () => {
@@ -38,32 +39,47 @@ const App = () => {
   }
 
   return (
-    <ColorsContext.Provider
-      value={{
-        visionProblemsMode: colorsState.visionProblemsMode
-      }}
-    >
-      <Router>
-        <Header></Header>
-        <button className="change-color-btn" onClick={() => changeColorsHandler()}>Tonos oscuros</button>
-        <Switch>
-          <Route path="/" exact component={Cover} />
-          <Route path="/ent" component={Ent} />
-          <Route path="/game/memorize" exact component={Memorize} />
-          <Route path="/game/puzzle" component={Jigsaw} />
-          <Route path="/game/adult" component={Game} />
-          <Route path="/game/child" component={ChildGame} />
-          <Route path="/home/:module/:topic" component={Module} />
-          <Route path="/home" component={Home} />
-          <Route path="/homeNiño" component={HomeNiño} />
-          <Route path="/loginModal" component={LoginModal} />
+    <Fragment>
+      <ColorsContext.Provider value={{
+            visionProblemsMode: colorsState.visionProblemsMode,
+          }}>
+        <Header clicked={changeColorsHandler} />
+      </ColorsContext.Provider>
+      {/* <button
+        className="change-color-btn"
+        onClick={() => changeColorsHandler()}
+      >
+        Tonos oscuros
+      </button> */}
+      <div className="main-content-wrapper">
+        <ColorsContext.Provider
+          value={{
+            visionProblemsMode: colorsState.visionProblemsMode,
+          }}
+        >
+          <Router>
+            <Switch>
+              <Route path="/" exact component={Cover} />
+              <Route path="/ent" component={Ent} />
+              <Route path="/game/adult/curious-fact" component={CuriousFact} />
+              <Route path="/game/ranking" component={Ranking} />
+              <Route path="/game/memorize" exact component={Memorize} />
+              <Route path="/game/puzzle" component={Jigsaw} />
+              <Route path="/game/adult" component={Game} />
+              <Route path="/game/child" component={ChildGame} />
+              <Route path="/home/:module/:topic" component={Module} />
+              <Route path="/home" component={Home} />
+              <Route path="/homeNiño" component={HomeNiño} />
+              <Route path="/loginModal" component={LoginModal} />
 
-          {/* <Route path="/modules" component={Modules} /> */}
-          <Route path="/ranking" component={Ranking} />
-        </Switch>
-        <Footer></Footer>
-      </Router>
-    </ColorsContext.Provider>
+              {/* <Route path="/modules" component={Modules} /> */}
+              <Route path="/ranking" component={Ranking} />
+            </Switch>
+            <Footer></Footer>
+          </Router>
+        </ColorsContext.Provider>
+      </div>
+    </Fragment>
   );
 }
 

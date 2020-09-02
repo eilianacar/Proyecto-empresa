@@ -90,10 +90,10 @@ const Game = () => {
             <h4>{result}</h4>
             <div className='buttonSelect'>
               <button className={
-                context.visionProblemsMode === true ? "buttonNext visionProblemsBlack" : 'buttonNext purple'}
+                context.visionProblemsMode === true ? "buttonNext visionProblemsBlack visionProblemsFontWeight" : 'buttonNext purple'}
                 onClick={onNext}>Siguiente</button>
               <button className={
-                context.visionProblemsMode === true ? "backButton visionProblemsBlack" : 'backButton purple'}
+                context.visionProblemsMode === true ? "backButton visionProblemsBlack visionProblemsFontWeight" : 'backButton purple'}
                 onClick={onBack}>Atras</button>
             </div>
 

@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'; 
 import { buildDeck } from './buildDeck';
 import MemorizeBoard from './MemorizeBoard.jsx';
 import './MemorizeBoard.css';
 import Counter from './Counter.jsx';
 import ColorsContext from '../context/ColorsContext.jsx';
+
 
 class MemorizeEntryPoint extends Component {
   state = {
@@ -144,8 +146,9 @@ class MemorizeEntryPoint extends Component {
               <button className={context.visionProblemsMode === true ? "memorize-reset-btn visionProblemsWhite" : "memorize-reset-btn purple"} onClick={this.resetGame}>
                 Reinicar juego
               </button>
-              <p>{this.state.winnerMessage}</p>
-              <p>{this.state.prize}</p>
+              <p className={context.visionProblemsMode === true ? "visionProblemsWhiteFont" : "visionProblemsBlackFont"}>{this.state.winnerMessage}</p>
+              <p className={context.visionProblemsMode === true ? "visionProblemsWhiteFont" : "visionProblemsBlackFont"}>{this.state.prize}</p>
+              {this.state.winner === true ? <Link to="/game/ranking"><button className={context.visionProblemsMode === true ? "back-btn visionProblemsBlack visionProblemsFontWeight" : "back-btn purple"}>Revisa tus resultados</button></Link> : null}
 
               <MemorizeBoard
                 deck={this.state.deck}
@@ -153,6 +156,7 @@ class MemorizeEntryPoint extends Component {
                 selectCard={(card) => this.selectCard(card)}
                 triesNumber={this.state.triesNumber}
               />
+              
             </div>
           );
           

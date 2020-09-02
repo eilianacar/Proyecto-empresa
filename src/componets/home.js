@@ -28,16 +28,16 @@ const Home = (props) => {
       return (<div className='home'>
       <div className='contenidoHome'>
         <div className='contenedorUno'>
-          <p className={context.visionProblemsMode === true ? "tituloSeccion visionProblemsBlack" : 'tituloSeccion purple'}>Módulos</p>
+          <p className={context.visionProblemsMode === true ? "tituloSeccion visionProblemsBlack visionProblemsFontWeight" : 'tituloSeccion purple'}>Módulos</p>
           <button className={context.visionProblemsMode === true ? "accordion visionProblemsBlack" : "accordion lightBlue"}>Módulo 1</button>
-          <div className={context.visionProblemsMode === true ? "panel visionProblemsGrey" : 'panel lightPurple'}>
+          <div className={context.visionProblemsMode === true ? "panel visionProblemsGrey visionProblemsFontWeight" : 'panel lightPurple'}>
             <p><Link to={`${props.match.url}/1/topic1`}>1- ¿Qué es el coronavirus?</Link></p>
             <p><Link to={`${props.match.url}/1/topic2`}>2- ¿Cómo se originó el virus?</Link></p>
             <p><Link to={`${props.match.url}/1/topic3`}>3- ¿Qué medidas se han tomado?</Link></p>
           </div>
 
           <button className={context.visionProblemsMode === true ? "accordion visionProblemsBlack" : "accordion lightBlue"}>Módulo 2</button>
-          <div className={context.visionProblemsMode === true ? "panel visionProblemsGrey" : 'panel lightPurple'}>
+          <div className={context.visionProblemsMode === true ? "panel visionProblemsGrey visionProblemsFontWeight" : 'panel lightPurple'}>
             <p><Link to={`${props.match.url}/2/topic1`}>1- La socialización</Link></p>
             <p><Link to={`${props.match.url}/2/topic2`}>2- ¿Cómo cambia la mente de los niños?</Link></p>
             <p><Link to={`${props.match.url}/2/topic3`}>3- Mecanismos del miedo</Link></p>
@@ -45,8 +45,8 @@ const Home = (props) => {
             <p><Link to={`${props.match.url}/2/topic10`}>5- Recomendaciones prácticas</Link></p>
           </div>
 
-          <button className={context.visionProblemsMode === true ? "accordion visionProblemsBlack" : "accordion lightBlue"}>Módulo 3</button>
-          <div className={context.visionProblemsMode === true ? "panel visionProblemsGrey" : 'panel lightPurple'}>
+          <button className={context.visionProblemsMode === true ? "accordion visionProblemsBlack visionProblemsFontWeight" : "accordion lightBlue"}>Módulo 3</button>
+          <div className={context.visionProblemsMode === true ? "panel visionProblemsGrey visionProblemsFontWeight" : 'panel lightPurple'}>
             <p><Link to={`${props.match.url}/3/topic1`}>1- Hábitos saludables</Link></p>
             <p><Link to={`${props.match.url}/3/topic2`}>2- Condicionamiento operante</Link></p>
             <p> <Link to={`${props.match.url}/3/topic3`}>3- Aprendizaje observacional</Link></p>
@@ -56,20 +56,20 @@ const Home = (props) => {
         </div>
 
         <div className='contenedorDos'>
-          <p className={context.visionProblemsMode === true ? "tituloSeccionEspecial visionProblemsBlack" : 'tituloSeccionEspecial purple'}>Juega y aprende</p>
+          <p className={context.visionProblemsMode === true ? "tituloSeccionEspecial visionProblemsBlack visionProblemsFontWeight" : 'tituloSeccionEspecial purple'}>Juega y aprende</p>
           <div className={
             context.visionProblemsMode === true ? "contenedorVideo visionProblemsGrey" : 'contenedorVideo lightPurple'}>
-            <p className={context.visionProblemsMode === true ? "visionProblemsBlack" : 'lightBlue'}>Ve este vídeo</p>
+            <p className={context.visionProblemsMode === true ? "visionProblemsBlack visionProblemsFontWeight" : 'lightBlue'}>Ve este vídeo</p>
             <video className='video' src={video} width="550" height="300" controls></video>
             <Link to="/game/adult">
-              <button className={context.visionProblemsMode === true ? "jugar visionProblemsBlack" : 'jugar purple'}>Jugar</button>
+              <button className={context.visionProblemsMode === true ? "jugar visionProblemsBlack visionProblemsFontWeight" : 'jugar purple'}>Jugar</button>
             </Link>
 
           </div>
         </div>
 
         <div className='contenedorTres'>
-          <p className={context.visionProblemsMode === true ? "tituloSeccion visionProblemsBlack" : 'tituloSeccion purple'}>Ranking</p>
+          <p className={context.visionProblemsMode === true ? "tituloSeccion visionProblemsBlack visionProblemsFontWeight" : 'tituloSeccion purple'}>Ranking</p>
           <p className={context.visionProblemsMode === true ? "p0 visionProblemsBlack" : 'p0 lightBlue'}></p>
           <p className='p1'>1° Juanita</p>
           <p className={context.visionProblemsMode === true ? "p2 visionProblemsGrey" : 'p2 lightPurple'}>2° Pepito</p>

@@ -1,0 +1,37 @@
+.fact-heading-container {
+  color: white;
+  width: 40vw;
+  /* background-color: #64259D; */
+}
+
+.fact-content-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.owl-image-container {
+  margin-top: 10rem;
+  width: 25vw;
+}
+
+.owl-image-container > img {
+  width: 100%;
+}
+
+.subheading-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+h3 {
+  color: white;
+  font-size: 3rem;
+}
+
+.actual-fact {
+  width: 40vw;
+  margin: 3rem 0;
+  border-radius: 5px;
+  /* background-color: #72BAEC; */
+  padding: 2rem;
+}

@@ -84,14 +84,14 @@ const ChildGame = () => {
                 </div>
                 <h4>{result}</h4>
                 <div className='buttonSelect'>
-                  <button className={context.visionProblemsMode === true ? "buttonNext visionProblemsBlack" : 'buttonNext purple'} onClick={onNext}>Siguiente
+                  <button className={context.visionProblemsMode === true ? "buttonNext visionProblemsBlack visionProblemsFontWeight" : 'buttonNext purple'} onClick={onNext}>Siguiente
                  </button>
                     <button className={
-                context.visionProblemsMode === true ? "backButton visionProblemsBlack" : 'backButton purple'}
-                        onClick={onBack}>Atras</button>
+                context.visionProblemsMode === true ? "backButton visionProblemsBlack visionProblemsFontWeight" : 'backButton purple'}
+                        onClick={onBack}>Atrás</button>
                 </div>
                 <Link to='/game/puzzle'>
-                    <button className={context.visionProblemsMode === true ? "puzzle-button visionProblemsDarkBlue" : "puzzle-button buttonPink"}>Puzzle</button>
+                    <button className={context.visionProblemsMode === true ? "puzzle-button visionProblemsDarkBlue visionProblemsFontWeight" : "puzzle-button buttonPink"}>Puzzle</button>
                 </Link>
 
                </div>
