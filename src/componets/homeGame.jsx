@@ -16,11 +16,11 @@ const HomeGame = (props) => {
           <Link to='/game/puzzle'>
             <img className='juegos' src={puzzle} alt='puzzle' width="10%" height="30%" />
           </Link>
-          <Link to='memorize'>
+          <Link to='/game/memorize'>
             <img className='juegos' src={memorize} alt='memorize' width="10%" height="30%" />
           </Link>
           <Link to='/homeNiño'>
-            <img className='juegos' src={VideosChild} alt='memorize' width="10%" height="30%" />
+            <img className='juegosTwo' src={VideosChild} alt='memorize' width="10%" height="30%" />
           </Link>
         </div>
       </article>

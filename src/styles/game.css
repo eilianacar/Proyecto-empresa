@@ -50,7 +50,7 @@
   align-items: center;
   width: 21%;
   height: 27vh;
-  /* background: white; */
+ background: white; 
   border-radius: 17px;
     cursor: pointer;
     transition: transform 200ms ease, box-shadow 200ms ease;
@@ -73,33 +73,142 @@
   height: 15vh;
   display: flex;
   flex-direction: row-reverse;
+  justify-content: space-between;
 }
 .buttonNext{
-  /* background: #64259D; */
-  width: 15%;
+  background: none;
+  width: 5%;
   height: 8vh;
-  border-radius: 26px;
-  color: white;
-  margin-right: 10%;
+  margin-right: 5%;
   border: none;
+  color:white;
+}
+.img-next{
+  width: 90%;
+  height: 169%;
+}
+.img-back{
+  width: 90%;
+  height: 169%;
 }
 .backButton{
-  /* background: #ff8402; */
-  width: 15%;
+  background: none;
+  width: 5%;
   height: 8vh;
-  border-radius: 26px;
-  color: white;
-  margin-right: 48%;
+  margin-left: 5%;
   border: none;
+  color:white;
 }
 
 .puzzle-button{
   width: 15vw;
   color: white;
-  /* background: #c95aff; */
-  padding: 13%;
+  padding: 9%;
   border-radius: 34px;
   border: none;
-  margin: -9% 0% 0% 215%;
-  height: 8vh;
+  margin: 25% 0% 0% 215%;
+}
+@media screen and (max-width:600px){
+  .questionContainer{
+    /* background: #B798C6; */
+    height: 100vh;
+  }
+  
+  .titleTrivia{
+    /* background-color: #64259D; */
+    color: #FFFFFF;  
+  }
+  /* .question{
+    border:#B798C6 1px solid;
+  } */
+  .selectAnswer{
+    display: flex;
+    /* color: #64259d; */
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    height: 10vh;
+    /* background: white; */
+    border-radius: 17px;
+    cursor: pointer;
+    transition: transform 200ms ease, box-shadow 200ms ease;
+    margin: 2% 2% 0% 19%;
+  }
+  .selectAnswer:hover{
+    z-index: 2;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    /* background-color: #64259d; */
+    color:white;
+  }
+  .banner{
+    width: 1299px;
+  }
+  .answersChild{
+    display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+  }
+  .cardTrivia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 43%;
+    height: 27vh;
+    background: white;
+    border-radius: 17px;
+    cursor: pointer;
+    transition: transform 200ms ease, box-shadow 200ms ease;
+    margin: 0% 2% 0% 4%;
+  }
+  .cardTrivia:hover{
+    z-index: 2;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  }
+  
+  .questionChild{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .buttonSelect{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .buttonNext{
+    /* background: #64259D; */
+    width: 15%;
+    height: 8vh;
+    border-radius: 26px;
+    color: white;
+    margin-right: 10%;
+    border: none;
+  }
+  .backButton{
+    /* background: #ff8402; */
+    width: 15%;
+    height: 8vh;
+    border-radius: 26px;
+    color: white;
+    margin-right: 48%;
+    border: none;
+  }
+  
+  .puzzle-button{
+    width: 51vw;
+    color: white;
+    padding: 7%;
+    border-radius: 34px;
+    border: none;
+    margin: 33% 0% 0% -2%;
+    height: 8vh;
+  }
+  .pregunta{
+    font-size: 19px;
+  }
 }

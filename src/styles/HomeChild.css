@@ -51,6 +51,11 @@
     height: 93%;
 
 }
+.juegosTwo{
+    margin-left: -8%;
+    width: 85%;
+    height: 93%;
+}
 .videoHome{
     margin: 3% 0% 0% 4%;
 }
@@ -115,21 +120,28 @@
         width: 100%;
     }
     .title-boxTwo{
-        width: 39%;
+        width: 53%;
         border-radius: 33px;
-        color: white;
-        margin: 5% 0% 0% 29%;
+        color: #9C27B0;
+        margin: 5% 0% 0% 21%;
     }
     .img-container{
         height: 100vh;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        margin-top: 8%;
+        margin-top: 6%;
     }
     .juegos{
-        width: 60%;
-        height: 93%;
+        width: 92%;
+        height: 94%;
+        margin-left: -11%;
+    
+    }
+    .juegosTwo{
+        width: 92%;
+        height: 94%;
+        margin-left: -11%;
     
     }
     .videoHome{
