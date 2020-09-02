@@ -1,7 +1,6 @@
 //Pantalla principal con todo el contenido, modulos, ranking y juegos
 import React from 'react';
 import '../styles/Home.css';
-import equipo from '../assests/HH_GAV_PumaEspumaYElEscuadronPrevencion.png';
 import { Link } from 'react-router-dom';
 import ColorsContext from './context/ColorsContext.jsx';
 import buho from '../assests/GAV_Personaje21.png'
@@ -37,8 +36,7 @@ const Home = (props) => {
               </div>
             </div>
             <div className='contenedorDos'>
-              <h1 className='textoTitulo'>Revisa más información sobre el Covid-19</h1>
-              <h1 className='textoTitulo'>y resuelve la trivia</h1>
+              <h1 className='textoTitulo'>Revisa más información sobre el Covid-19 y resuleve la trivia</h1>
               <img className='Buho' src={buho} alt='buho' />
               <Link to="/game/adult">
                 <button className={context.visionProblemsMode === true ? "jugar visionProblemsBlack" : 'jugar purple'}>Trivia</button>
