@@ -1,8 +1,5 @@
 .fixed-main-header {
   position: fixed;
   margin-top: -20rem;
-}
-
-footer {
-  margin-bottom: 1rem;
+  z-index: 3;
 }
