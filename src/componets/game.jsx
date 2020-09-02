@@ -5,6 +5,7 @@ import '../styles/game.css';
 import ColorsContext from './context/ColorsContext.jsx';
 import Next from '../assests/BotonDerecha_Naveg_Sobre.jpg'
 import Back from '../assests/BotonIzquierda_Naveg_Sobre.jpg'
+import { Link } from 'react-router-dom';
 const Game = () => {
 
   const [currentQuestion, setCurrentQuestion] = useState({});
@@ -97,7 +98,9 @@ const Game = () => {
                 <button onClick={onNext} className="buttonNext" ><img className="img-next" src={Next} alt='next' /> Siguiente</button>
                 <button onClick={onBack} className="backButton" ><img className="img-back" src={Back} alt='back' /> Atras</button>
               </div>
-
+              <Link to='/game/adult/curious-fact'>
+                <button className={context.visionProblemsMode === true ? "dato-button  visionProblemsDarkBlue" : "dato-button  buttonPink"}>Datos Curiosos</button>
+              </Link>
             </div>
           </div>
         )

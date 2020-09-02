@@ -35,3 +35,20 @@ h3 {
   /* background-color: #72BAEC; */
   padding: 2rem;
 }
+@media screen and (max-width:600px){
+  .owl-image-container {
+display:none;
+  }
+  .fact-heading-container {
+    color: white;
+    width: 100vw;
+    /* background-color: #64259D; */
+}
+.actual-fact {
+  width: 100vw;
+  margin: 3rem 0;
+  border-radius: 5px;
+  /* background-color: #72BAEC; */
+  padding: 2rem;
+}
+}

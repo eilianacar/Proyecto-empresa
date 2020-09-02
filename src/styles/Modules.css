@@ -62,7 +62,7 @@ h2 {
     margin-bottom: 1rem;
   }
   .content {
-    width: 172vw;
+    width: 100vw;
     padding: 1rem;
     display: flex;
     flex-flow: row wrap;
@@ -71,4 +71,16 @@ h2 {
     clear: both;
     float: left;
 }
+.content > p {
+  width: 93%;
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+.heading {
+  width: 100vw;
+  padding: 2rem;
+  text-align: center;
+  margin: 0;
+}
+
 }
