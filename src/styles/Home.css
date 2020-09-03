@@ -52,28 +52,34 @@
      padding: 26px;
  }
  .accordion {
-     /* background: #72BAEC; */
-     font-family: 'Rounded_Elegance';
-     color: #FFFFFF;
-     width: 300px;
-     height: 50px;
-     font-size: 25px;
-     border: none;
-     transition: 0.4s;
-     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
- }
+    /* background: #72BAEC; */
+    font-family: 'Rounded_Elegance';
+    color: #FFFFFF;
+    width: 300px;
+    height: 50px;
+    font-size: 25px;
+    border: none;
+    transition: 0.4s;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    right: 20px;
+    bottom: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
  .active, .accordion:hover {
      background-color: #A4D8F6; 
  }
  .panel {
-     /* background-color: #B798C6; */
-     color: #FFFFFF;
-     width: 300px;
-     /* height: 100px; --> lo comenté para que el height sea flexible */
-     text-align: center;
-     font-size: 16px;
-     padding: 20px;
- }
+    /* background-color: #B798C6; */
+    color: #FFFFFF;
+    width: 300px;
+    /* height: 100px; --> lo comenté para que el height sea flexible */
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+}
  .contenedorDos {
     display: flex;
     flex-direction: column;
