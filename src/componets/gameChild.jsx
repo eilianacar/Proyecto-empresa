@@ -70,11 +70,11 @@ const ChildGame = () => {
         <ColorsContext.Consumer>
             {context => {
                 return (
-                    <div className={context.visionProblemsMode === true ? "questionContainer visionProblemsGrey" : "questionContainer lightPurple"}>
+                    <div className={context.visionProblemsMode === true ? "questionContainer visionProblemsGrey" : "questionContainer visionProblemsWhite"}>
                         <h1 className={context.visionProblemsMode === true ? "titleTrivia visionProblemsBlack" : 'titleTrivia purple'}> ¡Demuetra lo aprendido!</h1>
-                        <h3 className={context.visionProblemsMode === true ? "visionProblemsWhiteFont" : "visionProblemsBlackFont"}>Tu puntuación es: {score}</h3>
+                        <h3 className={context.visionProblemsMode === true ? "visionProblemsWhiteFont visionProblemsFontWeight" : "purpleFont"}>Tu puntuación es: {score}</h3>
                         <div className='questionChild'>
-                            <p>{currentQuestion.question}</p>
+                            <p className={context.visionProblemsMode === true ? "visionProblemsWhiteFont visionProblemsFontWeight" : "purpleFont"}>{currentQuestion.question}</p>
                             <div className='answersChild'>
                                 {currentQuestion.answers?.map((answer, ansindex) => {
                                     return (

@@ -6,65 +6,53 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 html {
   font-size: 65.2% /*1rem = 10px --> solo si quieren usar rem, sino sáquenlo nomás ;D */
 }
-
 /* COLOR DE LINKS */
 a {
   color: white;
   text-decoration: none;
 }
-
-
 /* COLORES PREDETERMINADOS */
-
 .boardColor {
   background-color: #72b9ec3b;
 }
-
 .buttonPink {
   background-color: #c95aff; /*visionProblemsDarkBlue*/
 }
-
 .shinyPink {
   color: #9C27B0; /*visionProblemsWhiteFont*/
 }
-
 .orange {
   background-color: #ff8300; /*visionProblemsBlack*/
 }
 .lightPink {
   background-color: #f2bfff; /*visionProblemsGrey*/
 }
-
 .purple {
   background-color: #64259D; /*visionProblemsBlack*/
   color: white;
 }
-
 .darkPurple {
   background:#572A99;  /*visionProblemsBlack*/
 }
-
 .darkPurpleFont {   
   color:#572A99; /*visionProblemsBlackFont*/
 }
-
 .lightPurple {
   background-color: #B798C6; /*visionProblemsGrey*/
 }
-
+.purpleFont {
+  color: #572A99;
+}
 .lightBlue {
   background-color: #72BAEC; /*visionProblemsBlack*/
 }
-
 .whiteColor {
   color: white;
 }
@@ -74,37 +62,29 @@ a {
 /* .lightBlue:hover { 
   background-color: #A4D8F6; 
 } 
-
 /* COLORES PARA PERSONAS CON PROBLEMAS DE VISIÓN */
 .visionProblemsBlackFont {
   color: black;
 }
-
 .visionProblemsBlack {
   background-color: black;
 }
-
 .visionProblemsGreyFont {
    color: grey;
 }
-
 .visionProblemsDarkBlue {
   background-color: rgb(19, 9, 65);
 }
-
 .visionProblemsGrey {
   background-color: #181616;
 }
-
 .visionProblemsWhiteFont {
   color: white;
 }
-
 .visionProblemsWhite {
   background-color: white;
   color: black;
 }
-
 .visionProblemsFontWeight {
   font-weight: bold;
   font-size: 2rem;
