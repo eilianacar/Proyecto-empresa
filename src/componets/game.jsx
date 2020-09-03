@@ -7,22 +7,18 @@ import Next from '../assests/BotonDerecha_Naveg_Sobre.jpg'
 import Back from '../assests/BotonIzquierda_Naveg_Sobre.jpg'
 import { Link } from 'react-router-dom';
 const Game = () => {
-
   const [currentQuestion, setCurrentQuestion] = useState({});
   const [step, setStep] = useState(0);
   const [score, setScore] = useState(0);
   const [result, setResult] = useState("");
   const [disabled, setDisabled] = useState(false);
-
   useEffect(() => {
     setCurrentQuestion(triviaAdults.questions[0]);
   }, []);
-
   const loadQuestion = (s) => {
     const question = triviaAdults.questions[s];
     setCurrentQuestion(question);
   };
-
   const onNext = () => {
     setDisabled(false)
     const totalQuestions = triviaAdults.questions.length
@@ -37,7 +33,6 @@ const Game = () => {
     loadQuestion(nextStep);
     setStep(nextStep);
   };
-
   const onBack = () => {
     const totalQuestions = triviaAdults.questions.length
     if ((step - 1) === totalQuestions) {
@@ -56,7 +51,6 @@ const Game = () => {
     const onOk = () => {
       setScore(score + 1)
       setResult("Respuesta Correcta")
-
     }
     const onError = () => {
       setScore(score - 1)
@@ -68,23 +62,21 @@ const Game = () => {
       onError && onError() // si onError es cierto ejecuta la funcion onError()
     }
   }
-
   const questions = triviaAdults.questions || [];
-
   return (
     <ColorsContext.Consumer>
       {context => {
         return (
-          <div className={context.visionProblemsMode === true ? "questionContainer visionProblemsGrey" : 'questionContainer lightPurple'} style={{ border: "solid 1px #000" }}>
+          <div className={context.visionProblemsMode === true ? "questionContainer visionProblemsGrey" : 'questionContainer visionProblemsWhite'} style={{ border: "solid 1px #000" }}>
             <h1 className={context.visionProblemsMode === true ? "titleTrivia visionProblemsBlack" : 'titleTrivia purple'}> ¡Demuetra lo aprendido!</h1>
-            <h4>Tu puntuación es: {score}</h4>
+            <h4 className={context.visionProblemsMode === true ? "visionProblemsWhiteFont visionProblemsFontWeight" : "purpleFont"}>Tu puntuación es: {score}</h4>
             <div className='question'>
-              <p>{currentQuestion.question}</p>
+              <p className={context.visionProblemsMode === true ? "visionProblemsWhiteFont visionProblemsFontWeight" : "purpleFont"}>{currentQuestion.question}</p>
               <div className='answers'>
                 {currentQuestion.answers?.map((answer, ansindex) => {
                   return (
                     <button disabled={disabled}
-                      className={context.visionProblemsMode === true ? "selectAnswer visionProblemsBlack" : 'selectAnswer purple'}
+                      className={context.visionProblemsMode === true ? "selectAnswer visionProblemsBlack visionProblemsWhiteFont visionProblemsFontWeight" : 'selectAnswer purple'}
                       onClick={() => handleOnClickAnswer(answer.isCorrect)}
                       key={`answer-${ansindex}`}
                     >
@@ -106,8 +98,6 @@ const Game = () => {
         )
       }}
     </ColorsContext.Consumer>
-
   )
 }
-
 export default Game;

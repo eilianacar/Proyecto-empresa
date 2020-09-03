@@ -25,11 +25,8 @@ import Jigsaw from './componets/puzzle';
 import Footer from './componets/Footer'
 import ColorsContext from './componets/context/ColorsContext.jsx';
 import CuriousFact from './componets/CuriousFact.jsx';
-
-
 const App = (props) => {
   const [colorsState, setColorsState] = useState({ visionProblemsMode: false });
-
   const changeColorsHandler = () => {
     let toggleColor;
     colorsState.visionProblemsMode === false ? toggleColor = true : toggleColor = false;
@@ -38,27 +35,28 @@ const App = (props) => {
     });
     console.log("visionProblemsMode: true");
   }
-
   return (
     <Fragment>
-      <ColorsContext.Provider value={{
-        visionProblemsMode: colorsState.visionProblemsMode,
-      }}>
-        <Header clicked={changeColorsHandler} />
-      </ColorsContext.Provider>
-      {/* <button
-        className="change-color-btn"
-        onClick={() => changeColorsHandler()}
-      >
-        Tonos oscuros
-      </button> */}
-      <div className="main-content-wrapper">
+      <Router>
         <ColorsContext.Provider
           value={{
             visionProblemsMode: colorsState.visionProblemsMode,
           }}
         >
-          <Router>
+          <Header clicked={changeColorsHandler} />
+        </ColorsContext.Provider>
+        {/* <button
+        className="change-color-btn"
+        onClick={() => changeColorsHandler()}
+      >
+        Tonos oscuros
+      </button> */}
+        <div className="main-content-wrapper">
+          <ColorsContext.Provider
+            value={{
+              visionProblemsMode: colorsState.visionProblemsMode,
+            }}
+          >
             <Switch>
               <Route path="/" exact component={Cover} />
               <Route path="/ent" component={Ent} />
@@ -72,16 +70,14 @@ const App = (props) => {
               <Route path="/home" component={Home} />
               <Route path="/homeNiño" component={HomeNiño} />
               <Route path="/menuChild" component={menuChild} />
-
               {/* <Route path="/modules" component={Modules} /> */}
               <Route path="/game" component={HomeGame} />
             </Switch>
             <Footer></Footer>
-          </Router>
-        </ColorsContext.Provider>
-      </div>
+          </ColorsContext.Provider>
+        </div>
+      </Router>
     </Fragment>
   );
 }
-
 export default App;
