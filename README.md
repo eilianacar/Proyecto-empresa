@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Ganémosle al virus
+Atendiendo los requerimientos solicitados por la empresa Hotie Hoo, se desarrolló la aplicación Web Ganémosle al Virus, una app con enfoque informativo, educativo y social, que aborda uno de temas más importantes a nivel de salud del 2020, el COVID-19.
 
-## Available Scripts
+Actualmente la humanidad está viviendo una pandemia mundial de salud y si bien es un tema que está en boca de gran parte de la población, existen un gran vacío de desinformación sobre este tema. Ganémosle al virus  nace para concienciar e informar a la comunidad con acceso a internet sobre datos verificados y confiables sumándose así las distintas organizaciones que trabajan combatir la desinformación sobre dicho tema.
 
-In the project directory, you can run:
+Esta aplicación web está pensada para adultos, adultas, niños y niñas  y brinda interactividad, lo que permite que los usuarios y usuarias puedan poner en practica lo aprendido.
 
-### `npm start`
+##  Accesibilidad 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+La aplicación web tiene cuenta con dos perfiles dirigidos adultos/as y niños/as, en ambos perfiles contrarán una sección informativa y de juegos
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Interactividad
+Existen un total de 4 juegos con los que los usuarios/as podran interactuar 
 
-### `npm test`
+## Inclusivo 
+Ganémoles al virus se desarrolló con un lenguaje inclusivo, y pensado para personas con dificultades visuales específicamente cataratas y degeneración macular, por lo que cuenta con un botón que permite cambiar los colores de la pantalla a tonalidades más oscuras. 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Diagrama de Flujo de Ganémosle al virus
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[diagrama-de-flujo](https://i.ibb.co/PzL8z1Q/Flujograma.png)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Historias de usuarios 
 
-### `npm run eject`
+## Historia de usuarios para adultos/as: 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+• Historia 1: Yo como usuario quiero poder ingresar a un perfil según mi edad para conocer infomación referente al COVID-19 y seleccionar los colores de mi página. (Nombre y edad)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+• Historia 2: Yo como usuario quiero poder acceder a la infomación relacionado al covid-19
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+• Historia 3: Yo como usuario quiero poder demostrar lo aprendido en un juego interactivo 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+• Historia 4: Yo como usuario quiero ver una tabla de resultados de mis aciertos
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Historia de usuarios para niños/as: 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
+• Historia 1:  Yo como usuario quiero poder ingresar a un perfil según mi edad para conocer infomación referente al COVID-19.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+• Historia 2: Yo como usuario quiero poder acceder a la infomación relacionado al covid-19
 
-### Making a Progressive Web App
+• Historia 3: Yo como usuario quiero poder demostrar lo aprendido en un juego interactivo 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+• Historia 4: Yo como usuario quiero ver una tabla de resultados de mis aciertos
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
